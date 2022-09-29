@@ -1,12 +1,17 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Enum.java to edit this template
+/**
+ *
+ * @Course: ICT 4305
+ * @File:
+ * @Instructor: Dr. Sherri Maciosek
+ *
  */
 package edu.du.ict4305.parkingsystem;
 
 /**
- *
+ * 
+ * @Date: 
  * @author lutherchikumba
+ *
  */
 public enum CarType {
     
