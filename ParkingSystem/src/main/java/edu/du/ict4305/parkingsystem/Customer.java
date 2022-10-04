@@ -6,91 +6,111 @@
 package edu.du.ict4305.parkingsystem;
 
 /**
+ * The type Customer.
+ *
  * @author lutherchikumba
- * @Date: 9/29/2022
+ * @Date: 9 /29/2022
  */
 public class Customer {
-    private String customerId;
-    private String name;
-    private Address address;
-    private String phoneNumber;
+      private String customerId;
+      private String name;
+      private Address address;
+      private String phoneNumber;
 
-    /**
-     *
-     */
-    public Customer() {
+      /**
+       * Instantiates a new Customer.
+       */
+      public Customer() {
 
-    }
+      }
 
-    /**
-     * @return
-     */
-    public String getCustomerId() {
-        return customerId;
-    }
+      /**
+       * Gets customer id.
+       *
+       * @return customer id
+       */
+      public String getCustomerId() {
+            return customerId;
+      }
 
-    /**
-     * @param customerId
-     */
-    public void setCustomerId(String customerId) {
-        this.customerId = customerId;
-    }
+      /**
+       * Sets customer id.
+       *
+       * @param customerId the customer id
+       */
+      public void setCustomerId(String customerId) {
+            this.customerId = customerId;
+      }
 
-    /**
-     * @return
-     */
-    public String getName() {
-        return name;
-    }
+      /**
+       * Gets name.
+       *
+       * @return name
+       */
+      public String getName() {
+            return name;
+      }
 
-    /**
-     * @param name
-     */
-    public void setName(String name) {
-        this.name = name;
-    }
+      /**
+       * Sets name.
+       *
+       * @param name the name
+       */
+      public void setName(String name) {
+            this.name = name;
+      }
 
-    /**
-     * @return
-     */
-    public Address getAddress() {
-        return address;
-    }
+      /**
+       * Gets address.
+       *
+       * @return address
+       */
+      public Address getAddress() {
+            return address;
+      }
 
-    /**
-     * @param address
-     */
-    public void setAddress(Address address) {
-        this.address = address;
-    }
+      /**
+       * Sets address.
+       *
+       * @param address the address
+       */
+      public void setAddress(Address address) {
+            this.address = address;
+      }
 
-    /**
-     * @return
-     */
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
+      /**
+       * Gets phone number.
+       *
+       * @return phone number
+       */
+      public String getPhoneNumber() {
+            return phoneNumber;
+      }
 
-    /**
-     * @param phoneNumber
-     */
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
+      /**
+       * Sets phone number.
+       *
+       * @param phoneNumber the phone number
+       */
+      public void setPhoneNumber(String phoneNumber) {
+            this.phoneNumber = phoneNumber;
+      }
 
-    /**
-     * @param license
-     * @param Car
-     * @return
-     */
-    public Car register(String license, CarType Car) {
-        return null;
-    }
+      /**
+       * Register car.
+       *
+       * @param license the license
+       * @param Car     the car
+       * @return car
+       */
+      public Car register(String license, CarType Car) {
+            return null;
+      }
 
-    /**
-     * @return
-     */
-    public String toString() {
-        return "";
-    }
+      /**
+       * @return
+       */
+      public String toString() {
+            return "";
+      }
 }

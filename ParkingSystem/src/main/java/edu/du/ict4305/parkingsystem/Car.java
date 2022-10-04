@@ -8,92 +8,110 @@ package edu.du.ict4305.parkingsystem;
 import java.time.LocalDate;
 
 /**
+ * The type Car.
  *
- * @Date: 9/29/2022
  * @author lutherchikumba
- *
+ * @Date: 9 /29/2022
  */
 public class Car {
-    private String permit;
-    private LocalDate permitExpiration;
-    private String license;
-    private CarType type;
+      private String permit;
+      private LocalDate permitExpiration;
+      private String license;
+      private CarType type;
 
-    /**
-     *
-     */
-    public Car() {
+      /**
+       * Instantiates a new Car.
+       */
+      public Car() {
 
-    }
+      }
 
-    /**
-     * @return
-     */
-    public String getPermit() {
-        return permit;
-    }
+      /**
+       * Gets permit.
+       *
+       * @return permit permit
+       */
+      public String getPermit() {
+            return permit;
+      }
 
-    /**
-     * @param permit
-     */
-    public void setPermit(String permit) {
-        this.permit = permit;
-    }
+      /**
+       * Sets permit.
+       *
+       * @param permit the permit
+       */
+      public void setPermit(String permit) {
+            this.permit = permit;
+      }
 
-    /**
-     * @return
-     */
-    public LocalDate getPermitExpiration() {
-        return permitExpiration;
-    }
+      /**
+       * Gets permit expiration.
+       *
+       * @return permit expiration
+       */
+      public LocalDate getPermitExpiration() {
+            return permitExpiration;
+      }
 
-    /**
-     * @param permitExpiration
-     */
-    public void setPermitExpiration(LocalDate permitExpiration) {
-        this.permitExpiration = permitExpiration;
-    }
+      /**
+       * Sets permit expiration.
+       *
+       * @param permitExpiration the permit expiration
+       */
+      public void setPermitExpiration(LocalDate permitExpiration) {
+            this.permitExpiration = permitExpiration;
+      }
 
-    /**
-     * @return
-     */
-    public String getLicense() {
-        return license;
-    }
+      /**
+       * Gets license.
+       *
+       * @return license
+       */
+      public String getLicense() {
+            return license;
+      }
 
-    /**
-     * @param license
-     */
-    public void setLicense(String license) {
-        this.license = license;
-    }
+      /**
+       * Sets license.
+       *
+       * @param license the license
+       */
+      public void setLicense(String license) {
+            this.license = license;
+      }
 
-    /**
-     * @return
-     */
-    public CarType getType() {
-        return type;
-    }
+      /**
+       * Gets type.
+       *
+       * @return type
+       */
+      public CarType getType() {
+            return type;
+      }
 
-    /**
-     * @param type
-     */
-    public void setType(CarType type) {
-        this.type = type;
-    }
+      /**
+       * Sets type.
+       *
+       * @param type the type
+       */
+      public void setType(CarType type) {
+            this.type = type;
+      }
 
-    /**
-     * @param id
-     * @return
-     */
-    public String owner(Customer id) {
-        return "";
-    }
+      /**
+       * Owner string.
+       *
+       * @param id the id
+       * @return string
+       */
+      public String owner(Customer id) {
+            return "";
+      }
 
-    /**
-     * @return
-     */
-    public String toString() {
-        return "";
-    }
+      /**
+       * @return
+       */
+      public String toString() {
+            return "";
+      }
 }
