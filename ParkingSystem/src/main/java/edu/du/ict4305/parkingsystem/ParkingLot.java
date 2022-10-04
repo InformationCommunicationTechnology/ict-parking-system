@@ -1,14 +1,12 @@
 /**
- *
  * @Course: ICT 4305
  * @File: ParkingLot.java
  * @Instructor: Dr. Sherri Maciosek
- *
  */
 package edu.du.ict4305.parkingsystem;
 
 /**
- * 
+ *
  * @Date: 9/29/2022
  * @author lutherchikumba
  *
@@ -21,7 +19,7 @@ public class ParkingLot {
     /**
      *
      */
-    public ParkingLot(){
+    public ParkingLot() {
 
     }
 
@@ -70,14 +68,14 @@ public class ParkingLot {
     /**
      * @param car
      */
-    public void entry(Car car){
+    public void entry(Car car) {
 
     }
 
     /**
      * @return
      */
-    public String toString(){
+    public String toString() {
         return "";
     }
 }

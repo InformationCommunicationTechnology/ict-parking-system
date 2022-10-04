@@ -1,16 +1,14 @@
 /**
- *
  * @Course: ICT 4305
  * @File: Car.java
  * @Instructor: Dr. Sherri Maciosek
- *
  */
 package edu.du.ict4305.parkingsystem;
 
 import java.time.LocalDate;
 
 /**
- * 
+ *
  * @Date: 9/29/2022
  * @author lutherchikumba
  *
@@ -24,7 +22,7 @@ public class Car {
     /**
      *
      */
-    public  Car(){
+    public Car() {
 
     }
 
@@ -88,14 +86,14 @@ public class Car {
      * @param id
      * @return
      */
-    public String owner(Customer id){
+    public String owner(Customer id) {
         return "";
     }
 
     /**
      * @return
      */
-    public String toString(){
+    public String toString() {
         return "";
     }
 }
