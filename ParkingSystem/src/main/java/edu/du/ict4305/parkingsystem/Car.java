@@ -1,7 +1,7 @@
 /**
  *
  * @Course: ICT 4305
- * @File:
+ * @File: Car.java
  * @Instructor: Dr. Sherri Maciosek
  *
  */
@@ -9,7 +9,7 @@ package edu.du.ict4305.parkingsystem;
 
 /**
  * 
- * @Date: 
+ * @Date: 9/29/2022
  * @author lutherchikumba
  *
  */
