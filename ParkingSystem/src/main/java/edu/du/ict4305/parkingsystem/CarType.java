@@ -13,6 +13,14 @@ package edu.du.ict4305.parkingsystem;
  * @author lutherchikumba
  *
  */
-public enum CarType {
+public enum CarType {;
+
+    private String COMPACT;
+    private String SUV;
+
+    private CarType(String compact, String suv){
+        this.COMPACT = compact;
+        this.SUV = suv;
+    }
     
 }
