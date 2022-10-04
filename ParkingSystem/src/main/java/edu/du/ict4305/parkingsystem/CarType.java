@@ -1,7 +1,7 @@
 /**
  *
  * @Course: ICT 4305
- * @File:
+ * @File: CarType.java
  * @Instructor: Dr. Sherri Maciosek
  *
  */
@@ -9,10 +9,18 @@ package edu.du.ict4305.parkingsystem;
 
 /**
  * 
- * @Date: 
+ * @Date: 9/29/2022
  * @author lutherchikumba
  *
  */
-public enum CarType {
+public enum CarType {;
+
+    private String COMPACT;
+    private String SUV;
+
+    private CarType(String compact, String suv){
+        this.COMPACT = compact;
+        this.SUV = suv;
+    }
     
 }
