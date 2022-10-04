@@ -22,7 +22,7 @@ public class Car {
     private CarType type;
 
     /**
-     * 
+     *
      */
     public  Car(){
 
