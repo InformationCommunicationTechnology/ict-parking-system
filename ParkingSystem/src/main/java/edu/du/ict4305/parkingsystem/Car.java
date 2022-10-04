@@ -21,45 +21,80 @@ public class Car {
     private String license;
     private CarType type;
 
+    /**
+     * 
+     */
     public  Car(){
 
     }
 
+    /**
+     * @return
+     */
     public String getPermit() {
         return permit;
     }
 
+    /**
+     * @param permit
+     */
     public void setPermit(String permit) {
         this.permit = permit;
     }
 
+    /**
+     * @return
+     */
     public LocalDate getPermitExpiration() {
         return permitExpiration;
     }
 
+    /**
+     * @param permitExpiration
+     */
     public void setPermitExpiration(LocalDate permitExpiration) {
         this.permitExpiration = permitExpiration;
     }
 
+    /**
+     * @return
+     */
     public String getLicense() {
         return license;
     }
 
+    /**
+     * @param license
+     */
     public void setLicense(String license) {
         this.license = license;
     }
 
+    /**
+     * @return
+     */
     public CarType getType() {
         return type;
     }
 
+    /**
+     * @param type
+     */
     public void setType(CarType type) {
         this.type = type;
     }
 
+    /**
+     * @param id
+     * @return
+     */
     public String owner(Customer id){
         return "";
     }
+
+    /**
+     * @return
+     */
     public String toString(){
         return "";
     }
