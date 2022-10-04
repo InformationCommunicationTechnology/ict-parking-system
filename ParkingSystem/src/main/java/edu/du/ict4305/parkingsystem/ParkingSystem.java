@@ -6,14 +6,19 @@
 package edu.du.ict4305.parkingsystem;
 
 /**
+ * The type Parking system.
  *
- * @Date: 9/29/2022
  * @author lutherchikumba
- *
+ * @Date: 9 /29/2022
  */
 public class ParkingSystem {
 
-    public static void main(String[] args) {
-        System.out.println("Hello World!");
-    }
+      /**
+       * The entry point of application.
+       *
+       * @param args the input arguments
+       */
+      public static void main(String[] args) {
+            System.out.println("Hello World!");
+      }
 }
