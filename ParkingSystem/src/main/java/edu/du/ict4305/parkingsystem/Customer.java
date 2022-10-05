@@ -5,6 +5,8 @@
  */
 package edu.du.ict4305.parkingsystem;
 
+import java.time.LocalDate;
+
 /**
  * The type Customer.
  *
@@ -20,8 +22,11 @@ public class Customer {
       /**
        * Instantiates a new Customer.
        */
-      public Customer() {
-
+      public Customer(String name, String customerId, Address address, String phoneNumber ) {
+            this.name = name;
+            this.customerId = customerId;
+            this.address = address;
+            this.phoneNumber = phoneNumber;
       }
 
       /**
@@ -103,14 +108,15 @@ public class Customer {
        * @param Car     the car
        * @return car
        */
-      public Car register(String license, CarType Car) {
-            return null;
+      public Car register(String license, CarType type) {
+            LocalDate date = LocalDate.now();
+            return new Car("valid", date, license,type );
       }
 
       /**
        * @return
        */
       public String toString() {
-            return "";
+            return address.toString();
       }
 }

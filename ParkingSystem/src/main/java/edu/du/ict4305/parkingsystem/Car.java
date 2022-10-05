@@ -22,8 +22,11 @@ public class Car {
       /**
        * Instantiates a new Car.
        */
-      public Car() {
-
+      public Car(String permit, LocalDate permitExpiration, String license, CarType type ) {
+            this.permit = permit;
+            this.permitExpiration = permitExpiration;
+            this.license = license;
+            this.type = type;
       }
 
       /**
@@ -105,7 +108,7 @@ public class Car {
        * @return string
        */
       public String owner(Customer id) {
-            return "";
+            return id.getCustomerId();
       }
 
       /**

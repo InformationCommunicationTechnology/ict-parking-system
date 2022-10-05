@@ -21,8 +21,11 @@ public class Address {
       /**
        * Instantiates a new Address.
        */
-      public Address() {
-
+      public Address(String streetAddress1, String city, String state, String zipCode) {
+            this.streetAddress1 = streetAddress1;
+            this.city = city;
+            this.state = state;
+            this.zipCode = zipCode;
       }
 
       /**
@@ -121,6 +124,7 @@ public class Address {
        * @return address info
        */
       public String getAddressInfo() {
-            return "";
+            getStreetAddress2 = getStreetAddress1() + "\n" + getCity() +", " + getState() + getZipCode();
+            return getStreetAddress2;
       }
 }
