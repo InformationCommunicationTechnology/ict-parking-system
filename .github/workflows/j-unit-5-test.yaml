@@ -12,10 +12,10 @@ jobs:
         uses: actions/checkout@v2
       - name: Set up JDK 14
         uses: actions/setup-java@v1
-      with:
-        java-version: '14'
-        distribution: 'temurin'
-        cache: gradle
+        with:
+          java-version: '14'
+          distribution: 'temurin'
+          cache: gradle
       # - name: Cache Maven packages
       #   uses: actions/cache@v2
       #   with:
@@ -24,7 +24,7 @@ jobs:
       #     restore-keys: ${{ runner.os }}-m2
       # - name: Run tests with Maven
       #   run: mvn -B test --file src/test/java/edu/du/ict4305/parkingsystem/AddressTest.java
-    - name: Grant execute permission for gradlew
-      run: chmod +x gradlew
-    - name: Build with Gradle
-      run: ./gradlew build      
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
+      - name: Build with Gradle
+        run: ./gradlew build      
