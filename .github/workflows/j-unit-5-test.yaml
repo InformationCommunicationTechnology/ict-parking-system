@@ -10,21 +10,15 @@ jobs:
     steps:
       - name: Checkout the repository
         uses: actions/checkout@v2
-      - name: Set up JDK 11
+      - name: Set up JDK 14
         uses: actions/setup-java@v1
         with:
-          java-version: '11'
-          distribution: 'temurin'
-          cache: gradle
-      # - name: Cache Maven packages
-      #   uses: actions/cache@v2
-      #   with:
-      #     path: ~/.m2
-      #     key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
-      #     restore-keys: ${{ runner.os }}-m2
-      # - name: Run tests with Maven
-      #   run: mvn -B test --file src/test/java/edu/du/ict4305/parkingsystem/AddressTest.java
-      - name: Grant execute permission for gradlew
-        run: chmod +x ParkingSystem/src
-      - name: Build with Gradle
-        run: .ParkingSystem/src/test/java/edu/du/ict4305/parkingsystem/AddressTest.java
+          java-version: 14
+      - name: Cache Maven packages
+        uses: actions/cache@v2
+        with:
+          path: ~/.m2
+          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
+          restore-keys: ${{ runner.os }}-m2
+      - name: Run tests with Maven
+        run: mvn -B test --file pom.xml
