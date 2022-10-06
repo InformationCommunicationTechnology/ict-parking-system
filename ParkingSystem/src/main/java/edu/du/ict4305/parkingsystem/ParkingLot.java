@@ -5,6 +5,8 @@
  */
 package edu.du.ict4305.parkingsystem;
 
+import java.time.LocalDate;
+
 /**
  * The type Parking lot.
  *
@@ -85,7 +87,14 @@ public class ParkingLot {
        * @param car the car
        */
       public void entry(Car car) {
-            System.out.println("The car that has entered the parking lot is " + car);
+            car.setLicense("YYY:350");
+            car.setPermit("Invalid");
+            car.setType(CarType.COMPACT);
+            car.setPermitExpiration(LocalDate.now());
+            System.out.println("The car that has entered the license is " + car.getLicense());
+            System.out.println("The car that has entered the permit is " + car.getPermit());
+            System.out.println("The car that has entered the car type is " + car.getType());
+            System.out.println("The car that has entered the permit expiration date is " + car.getPermitExpiration());
       }
 
       /**
