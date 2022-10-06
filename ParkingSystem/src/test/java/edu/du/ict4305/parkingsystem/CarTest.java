@@ -33,6 +33,8 @@ public class CarTest {
 
       @Test
       public void setPermit() {
+            car.setPermit("Invalid");
+            assertEquals("Invalid", car.getPermit());
       }
 
       @Test
@@ -42,6 +44,8 @@ public class CarTest {
 
       @Test
       public void setPermitExpiration() {
+            car.setPermitExpiration(date);
+            assertEquals(date, car.getPermitExpiration());
       }
 
       @Test
@@ -51,6 +55,8 @@ public class CarTest {
 
       @Test
       public void setLicense() {
+            car.setLicense("YYY:350");
+            assertEquals("YYY:350", car.getLicense());
       }
 
       @Test
@@ -60,6 +66,8 @@ public class CarTest {
 
       @Test
       public void setType() {
+            car.setType(type);
+            assertEquals(type, car.getType());
       }
 
       @Test
