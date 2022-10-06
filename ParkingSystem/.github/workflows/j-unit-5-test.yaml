@@ -2,7 +2,7 @@ name: tests
 on:
   push:
     branches:
-      - devcustomer-car-address-parkinglot-classes/ict-4305
+      - customer-car-address-parkinglot-classes/ict-4305
 
 jobs:
   run_tests:
