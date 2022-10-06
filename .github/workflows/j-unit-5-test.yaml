@@ -25,6 +25,6 @@ jobs:
       # - name: Run tests with Maven
       #   run: mvn -B test --file src/test/java/edu/du/ict4305/parkingsystem/AddressTest.java
       - name: Grant execute permission for gradlew
-        run: chmod +x ParkingSystem/src
+        run: chmod +x ParkingSystem/src/test/java/edu/du/ict4305/parkingsystem
       - name: Build with Gradle
-        run: ./ParkingSystem/src build      
+        run: .ParkingSystem/src/test/java/edu/du/ict4305/parkingsystem build      
