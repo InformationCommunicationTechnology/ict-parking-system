@@ -22,7 +22,7 @@ public class Car {
       /**
        * Instantiates a new Car.
        */
-      public Car(String permit, LocalDate permitExpiration, String license, CarType type ) {
+      public Car(String permit, LocalDate permitExpiration, String license, CarType type) {
             this.permit = permit;
             this.permitExpiration = permitExpiration;
             this.license = license;

@@ -124,7 +124,7 @@ public class Address {
        * @return address info
        */
       public String getAddressInfo() {
-            getStreetAddress2 = getStreetAddress1() + "\n" + getCity() +", " + getState() + " " + getZipCode();
+            getStreetAddress2 = getStreetAddress1() + "\n" + getCity() + ", " + getState() + " " + getZipCode();
             return getStreetAddress2;
       }
 }

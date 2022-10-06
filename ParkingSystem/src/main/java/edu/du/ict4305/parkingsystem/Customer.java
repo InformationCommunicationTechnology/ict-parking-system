@@ -23,7 +23,7 @@ public class Customer {
       /**
        * Instantiates a new Customer.
        */
-      public Customer(String name, String customerId, Address address, String phoneNumber ) {
+      public Customer(String name, String customerId, Address address, String phoneNumber) {
             this.name = name;
             this.customerId = customerId;
             this.address = address;
