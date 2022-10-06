@@ -18,11 +18,12 @@ public class Customer {
       private String name;
       private Address address;
       private String phoneNumber;
+      private Car car;
 
       /**
        * Instantiates a new Customer.
        */
-      public Customer(String name, String customerId, Address address, String phoneNumber ) {
+      public Customer(String name, String customerId, Address address, String phoneNumber) {
             this.name = name;
             this.customerId = customerId;
             this.address = address;
@@ -109,14 +110,8 @@ public class Customer {
        * @return car
        */
       public Car register(String license, CarType type) {
-            LocalDate date = LocalDate.now();
-            return new Car("valid", date, license,type );
+            car = new Car("invalid", LocalDate.now(), license, type);
+            return car;
       }
 
-      /**
-       * @return
-       */
-      public String toString() {
-            return address.toString();
-      }
 }

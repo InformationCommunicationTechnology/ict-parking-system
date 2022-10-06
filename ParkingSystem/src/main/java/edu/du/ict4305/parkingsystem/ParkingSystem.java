@@ -24,7 +24,10 @@ public class ParkingSystem {
             Customer customer = new Customer("luther", "303422428", address, "### ### ####");
             CarType type = CarType.SUV;
             Car register = customer.register("YYY:350", type);
+            ParkingLot parkingLot = new ParkingLot("4", "4581 S Valdai Way. Aurora CO 80015", 76);
+            parkingLot.entry(register);
             System.out.println("Hello World! My here's my new registered car type is " + register.getType());
             System.out.println("Hello World! My here's my new registered car license is " + register.getLicense());
+            System.out.println("Print entry: " + customer.register("d6780-0", type).getLicense());
       }
 }
