@@ -25,7 +25,15 @@ public class CustomerTest {
       }
 
       @Test
+      public void setCustomerId() {
+      }
+
+      @Test
       public void getName() {
+      }
+
+      @Test
+      public void setName() {
       }
 
       @Test
@@ -33,7 +41,15 @@ public class CustomerTest {
       }
 
       @Test
+      public void setAddress() {
+      }
+
+      @Test
       public void getPhoneNumber() {
+      }
+
+      @Test
+      public void setPhoneNumber() {
       }
 
       @Test

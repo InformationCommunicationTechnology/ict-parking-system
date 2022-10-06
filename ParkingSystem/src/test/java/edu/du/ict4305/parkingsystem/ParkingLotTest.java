@@ -25,11 +25,23 @@ public class ParkingLotTest {
       }
 
       @Test
+      public void setLotId() {
+      }
+
+      @Test
       public void getAddress() {
       }
 
       @Test
+      public void setAddress() {
+      }
+
+      @Test
       public void getCapacity() {
+      }
+
+      @Test
+      public void setCapacity() {
       }
 
       @Test

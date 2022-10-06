@@ -25,7 +25,15 @@ public class CarTest {
       }
 
       @Test
+      public void setPermit() {
+      }
+
+      @Test
       public void getPermitExpiration() {
+      }
+
+      @Test
+      public void setPermitExpiration() {
       }
 
       @Test
@@ -33,7 +41,15 @@ public class CarTest {
       }
 
       @Test
+      public void setLicense() {
+      }
+
+      @Test
       public void getType() {
+      }
+
+      @Test
+      public void setType() {
       }
 
       @Test
