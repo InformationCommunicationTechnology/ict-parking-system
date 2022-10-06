@@ -22,5 +22,5 @@ jobs:
           restore-keys: ${{ runner.os }}-m2
       - name: Run tests with Maven
         run: |
-        mvn versions:update-property -Dproperty=some-version -DnewVersion=1.6.2 -DsearchReactor=false -DallowSnapshots=true
-        mvn -B test --file pom.xml
+          mvn versions:update-property -Dproperty=some-version -DnewVersion=1.6.2 -DsearchReactor=false -DallowSnapshots=true
+          mvn -B test --file pom.xml
