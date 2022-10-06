@@ -111,10 +111,4 @@ public class Car {
             return id.getCustomerId();
       }
 
-      /**
-       * @return
-       */
-      public String toString() {
-            return "";
-      }
 }
