@@ -21,6 +21,4 @@ jobs:
       #     key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
       #     restore-keys: ${{ runner.os }}-m2
       - name: Run tests with Maven
-        run: |
-          cd ParkingSystem/src/test/java/edu/du/ict4305/parkingsystem
-          mvn -B test --file AddressTest.java
+        run: mvn -B test --file pom.xml
