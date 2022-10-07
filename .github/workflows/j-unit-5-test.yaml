@@ -26,6 +26,10 @@ jobs:
         mvn -B package --file pom.xml
   publish-job:
       runs-on: ubuntu-latest
+      defaults:
+        run:
+          shell: bash
+          working-directory: ParkingSystem          
       needs: [build]
       steps:
         - uses: actions/checkout@v2
