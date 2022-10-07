@@ -17,7 +17,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class ParkingLotTest {
       ParkingLot parkingLot;
       public ParkingLotTest() {
-            parkingLot = new ParkingLot("3", "4581 S Valdai Way. Aurora CO 80015", 100);
+            parkingLot = new ParkingLot("2", "4581 S Valdai Way. Aurora CO 80015", 100);
       }
 
       @Test
@@ -28,7 +28,7 @@ public class ParkingLotTest {
       @Test
       public void setLotId() {
             parkingLot.setLotId("5");
-            assertEquals("5", parkingLot.getLotId());
+            assertEquals("6", parkingLot.getLotId());
       }
 
       @Test
