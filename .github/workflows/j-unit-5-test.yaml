@@ -18,9 +18,9 @@ jobs:
         uses: actions/cache@v2
         with:
           path: ~/.m2
-          # key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
+          key: ${{ runner.os }}-m2-${{ hashFiles('**/src/test/java/edu/du/ict4305/parkingsystem/AddressTest.java') }}
           restore-keys: ${{ runner.os }}-m2
       - name: Run tests with Maven
         run: |
-          cd ParkingSystem/src
+          cd ParkingSystem/src/test/java/edu/du/ict4305/parkingsystem/AddressTest.java
           mvn -B test
