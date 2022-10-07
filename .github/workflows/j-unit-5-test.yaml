@@ -2,7 +2,7 @@ name: tests
 on:
   push:
     branches:
-      - main
+      - customer-car-address-parkinglot-classes/ict-4305
 
 jobs:
   build:
