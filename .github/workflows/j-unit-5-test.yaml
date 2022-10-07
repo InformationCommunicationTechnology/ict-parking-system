@@ -24,4 +24,3 @@ jobs:
         run: |
           cd ParkingSystem
           mvn -B test --file pom.xml
-          mvn -B test --file src/test/java/edu/du/ict4305/parkingsystem/AddressTest.java
