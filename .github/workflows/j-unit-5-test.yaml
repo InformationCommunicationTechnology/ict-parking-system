@@ -23,5 +23,4 @@ jobs:
       - name: Run tests with Maven
         run: |
           cd ParkingSystem
-          mvn versions:update-property -Dproperty=some-version -DnewVersion=1.6.2 -DsearchReactor=false -DallowSnapshots=true
           mvn -B test --file pom.xml
