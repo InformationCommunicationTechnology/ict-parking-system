@@ -28,6 +28,5 @@ public class ParkingSystem {
             parkingLot.entry(register);
             System.out.println("Hello World! My here's my new registered car type is " + register.getType());
             System.out.println("Hello World! My here's my new registered car license is " + register.getLicense());
-            System.out.println("Print entry: " + customer.register("d6780-0", type).getLicense());
       }
 }

@@ -97,10 +97,4 @@ public class ParkingLot {
             System.out.println("The car that has entered the permit expiration date is " + car.getPermitExpiration());
       }
 
-      /**
-       * @return
-       */
-      public String toString() {
-            return "";
-      }
 }

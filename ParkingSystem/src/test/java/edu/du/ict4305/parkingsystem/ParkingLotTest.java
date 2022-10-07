@@ -17,7 +17,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class ParkingLotTest {
       ParkingLot parkingLot;
       public ParkingLotTest() {
-            parkingLot = new ParkingLot("2", "4581 S Valdai Way. Aurora CO 80015", 100);
+            parkingLot = new ParkingLot("3", "4581 S Valdai Way. Aurora CO 80015", 100);
       }
 
       @Test
@@ -51,14 +51,5 @@ public class ParkingLotTest {
       public void setCapacity() {
             parkingLot.setCapacity(67);
             assertEquals(67, parkingLot.getCapacity());
-      }
-
-      @Test
-      public void entry() {
-
-      }
-
-      @Test
-      public void testToString() {
       }
 }

@@ -18,7 +18,6 @@ public class Customer {
       private String name;
       private Address address;
       private String phoneNumber;
-      private Car car;
 
       /**
        * Instantiates a new Customer.
@@ -110,7 +109,7 @@ public class Customer {
        * @return car
        */
       public Car register(String license, CarType type) {
-            car = new Car("invalid", LocalDate.now(), license, type);
+            Car car = new Car("invalid", LocalDate.now(), license, type);
             return car;
       }
 
