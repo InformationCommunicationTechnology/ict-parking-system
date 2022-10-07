@@ -8,6 +8,10 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+        working-directory: ParkingSystem    
 
     steps:
     - uses: actions/checkout@v3
@@ -19,5 +23,4 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: |
-        cd ParkingSystem
         mvn -B package --file pom.xml
