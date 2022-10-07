@@ -2,7 +2,7 @@ name: tests
 on:
   push:
     branches:
-      - customer-car-address-parkinglot-classes/ict-4305
+      - main
 
 jobs:
   build:
@@ -24,21 +24,3 @@ jobs:
     - name: Build with Maven
       run: |
         mvn -B package --file pom.xml
-  publish-job:
-      runs-on: ubuntu-latest
-      defaults:
-        run:
-          shell: bash
-          working-directory: ParkingSystem          
-      needs: [build]
-      steps:
-        - uses: actions/checkout@v2
-        - uses: actions/setup-java@v1
-          with:
-            java-version: 14
-        - run: mvn -B package --file pom.xml -DskipTests
-        - run: mkdir staging && cp target/*jar-with-dependencies.jar staging
-        - uses: actions/upload-artifact@v1
-          with:
-            name: Package
-            path: staging        
