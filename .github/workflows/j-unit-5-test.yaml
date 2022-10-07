@@ -22,5 +22,6 @@ jobs:
       #     restore-keys: ${{ runner.os }}-m2
       - name: Run tests with Maven
         run: |
+         rm -rf rm -rf ~/.m2/repository/org/apache/
          cd ParkingSystem
          mvn -B test --file src/test/java/edu/du/ict4305/parkingsystem/AddressTest.java
