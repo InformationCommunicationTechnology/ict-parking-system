@@ -26,4 +26,4 @@ jobs:
           build
           test
         gradle-version: 6.5
-        build-root-directory: ParkingSystem/src/test
+        build-directory: ParkingSystem/src/test
