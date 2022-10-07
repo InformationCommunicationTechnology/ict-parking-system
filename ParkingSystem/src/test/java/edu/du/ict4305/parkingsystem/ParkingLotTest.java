@@ -28,7 +28,7 @@ public class ParkingLotTest {
       @Test
       public void setLotId() {
             parkingLot.setLotId("5");
-            assertEquals("6", parkingLot.getLotId());
+            assertEquals("5", parkingLot.getLotId());
       }
 
       @Test
