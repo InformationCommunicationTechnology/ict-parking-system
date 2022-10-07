@@ -24,4 +24,4 @@ jobs:
         run: |
          rm -rf rm -rf ~/.m2/repository/org/apache/
          cd ParkingSystem/src/test/java/edu/du/ict4305/parkingsystem
-         mvn -Dtest="parkingsystem" -DfailIfNoTests=false test
+         mvn -Dtest="parkingsystem" -DfailIfNoTests=false test --file AddressTest.java
