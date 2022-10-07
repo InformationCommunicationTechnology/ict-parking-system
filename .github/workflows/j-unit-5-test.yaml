@@ -23,5 +23,5 @@ jobs:
       - name: Run tests with Maven
         run: |
          rm -rf rm -rf ~/.m2/repository/org/apache/
-         cd ParkingSystem
+         cd ParkingSystem/src/test/java/edu/du/ict4305/parkingsystem
          mvn -B test
