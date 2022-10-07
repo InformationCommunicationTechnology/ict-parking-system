@@ -77,7 +77,4 @@ public class CarTest {
             assertEquals("303422425", car.owner(customer));
       }
 
-      @Test
-      public void testToString() {
-      }
 }

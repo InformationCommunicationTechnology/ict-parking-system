@@ -52,13 +52,4 @@ public class ParkingLotTest {
             parkingLot.setCapacity(67);
             assertEquals(67, parkingLot.getCapacity());
       }
-
-      @Test
-      public void entry() {
-
-      }
-
-      @Test
-      public void testToString() {
-      }
 }
