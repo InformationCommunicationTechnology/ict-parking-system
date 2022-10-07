@@ -22,5 +22,5 @@ jobs:
           restore-keys: ${{ runner.os }}-m2
       - name: Run tests with Maven
         run: |
-          cd ParkingSystem
+          cd ParkingSystem/src
           mvn -B test
