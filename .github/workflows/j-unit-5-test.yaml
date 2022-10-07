@@ -1,8 +1,9 @@
 name: tests
 on:
   push:
-    branches:
-      - customer-car-address-parkinglot-classes/ict-4305
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
 
 jobs:
   build:
