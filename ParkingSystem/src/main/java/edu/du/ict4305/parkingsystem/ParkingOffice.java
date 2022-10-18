@@ -6,6 +6,7 @@
 package edu.du.ict4305.parkingsystem;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -40,6 +41,7 @@ public class ParkingOffice {
        * The Charges.
        */
       List<ParkingCharge> charges;
+      Car car;
 
       /**
        * Instantiates a new Parking office.
@@ -57,8 +59,12 @@ public class ParkingOffice {
        * @return the customer
        */
       public Customer register(String name, Address address, String phone) { // You changed this line of code to start using Address instead of String
-            String customerId = "303422425";
-            return new Customer(name,customerId, address, phone);
+            if (name.isEmpty() || address == null || phone.isEmpty()) {
+                  throw new IllegalArgumentException("Either name or address or phone is empty!!");
+            }else {
+                  String customerId = "303422425";
+                  return new Customer(name, customerId, address, phone);
+            }
       }
 
       /**
@@ -70,19 +76,21 @@ public class ParkingOffice {
        * @return the car
        */
       public Car register(Customer c, String license, CarType t) {
-            String permit = "valid";
-            return new Car(permit, LocalDate.now(), license, t);
-      }
+            if (c == null || license.isEmpty() || t == null) {
+                  throw new IllegalArgumentException("Customer is not registered!");
+            }else{
+                  String permit = "valid";
+                  car = new Car(permit, LocalDate.now(), license, t);
+                  cars.add(car);
+                  return car;
+            }
 
-//      /**
-//       * Gets customer.
-//       *
-//       * @param name the name
-//       * @return the customer
-//       */
-//      public Customer getCustomer(String name) {
-//            return new Customer(name, String customerId, Address address, String phoneNumber);
-//      }
+      }
+      public void isCarRegistered(){
+            for (Car car1: cars) {
+                  System.out.println("Check these cars " + car1);
+            }
+      }
 
       /**
        * Add charge money.
@@ -90,7 +98,8 @@ public class ParkingOffice {
        * @return the money
        */
       public Money addCharge(ParkingCharge parkingCharge) {
-            return new Money();
+
+            return parkingCharge.getAmount();
       }
 
       /**

@@ -5,6 +5,8 @@
  */
 package edu.du.ict4305.parkingsystem;
 
+import java.time.Instant;
+
 /**
  * The type Money.
  *
@@ -19,9 +21,11 @@ public class Money {
 
       /**
        * Instantiates a new Money.
+       *
+       * @param cents the cents
        */
-      public Money() {
-
+      public Money(long cents) {
+            this.cents = cents;
       }
 
       /**
@@ -30,7 +34,7 @@ public class Money {
        * @return dollars
        */
       public double getDollars() {
-          return 0.0;
+            return (double) cents / 100.0;
       }
 
       /**

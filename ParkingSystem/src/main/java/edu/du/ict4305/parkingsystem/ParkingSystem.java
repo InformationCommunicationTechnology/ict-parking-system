@@ -5,6 +5,10 @@
  */
 package edu.du.ict4305.parkingsystem;
 
+import java.time.Instant;
+import java.time.LocalDate;
+import java.util.*;
+
 /**
  * The type Parking system.
  *
@@ -25,8 +29,52 @@ public class ParkingSystem {
             CarType type = CarType.SUV;
             Car register = customer.register("YYY:350", type);
             ParkingLot parkingLot = new ParkingLot("4", "4581 S Valdai Way. Aurora CO 80015", 76);
-            parkingLot.entry(register);
+//            parkingLot.entry(register);
             System.out.println("Hello World! My here's my new registered car type is " + register.getType());
             System.out.println("Hello World! My here's my new registered car license is " + register.getLicense());
+
+            // ##############################################################################################
+            //                                                                                              #
+            //            ASSIGNMENT: ADD MONEY, PARKING CHARGE, AND PARKING OFFICE CLASSES                 #
+            //                                                                                              #
+            // ##############################################################################################
+            List<Customer> customers = new ArrayList<>();
+            List<Car> cars = new ArrayList<>();
+            List<ParkingLot> lots = new ArrayList<>();
+            List<ParkingCharge> charges = new ArrayList<>();
+            customers.add(new Customer("Tafadzwa", "customerId", new Address("4581 S Valdai Way.", "Aurora", "CO", "80015"), "##########"));
+            customers.add(new Customer("Taurai", "303422425", new Address("4581 S Valdai Way.", "Aurora", "CO", "80015"), "##########"));
+            cars.add(new Car("valid", LocalDate.now(), "YYY350", CarType.COMPACT));
+            cars.add(new Car("invalid", LocalDate.now(), "YOY350", CarType.SUV));
+            lots.add(new ParkingLot("4728", "4581 S Valdai Way. Aurora CO 80015", 6));
+            lots.add(new ParkingLot("2847", "4581 S Valdai Way. Aurora CO 80015", 6));
+            charges.add(new ParkingCharge("4728", Instant.now(), new Money(78), "valid", 17));
+            charges.add(new ParkingCharge("2847", Instant.now(), new Money(78), "invalid", 17));
+
+            for (Customer customer1 : customers) {
+                  System.out.println("Here's the customer's addresses " + customer1.getAddress().getAddressInfo());
+            }
+
+            for (Car car : cars) {
+                  System.out.println("Here's the customer's car's type " + car.getType());
+            }
+
+            for (ParkingLot parkingLot1 : lots) {
+                  System.out.println("Here's the customer's parking lots " + parkingLot1.getLotId());
+            }
+
+            for (ParkingCharge parkingCharge : charges) {
+                  System.out.println("Here's the customer's parking charge " + parkingCharge.getAmount().getDollars());
+            }
+
+            ParkingLot parkingLot1 = new ParkingLot("4728", "4581 S Valdai Way. Aurora CO 80015", 6);
+            parkingLot1.entry(new Car("valid", LocalDate.now(), "YYY350", CarType.COMPACT));
+            parkingLot1.entry(new Car("valid", LocalDate.now(), "YYY350", CarType.SUV));
+//            ParkingCharge parkingCharge = new ParkingCharge("4728", Instant.now(), new Money(78), "valid",17);
+//            parkingCharge.setIncurred(Instant.now());
+            // Lets say you have been parking for 17 days
+            ParkingOffice parkingOffice = new ParkingOffice();
+            parkingOffice.isCarRegistered();
       }
+
 }

@@ -6,6 +6,7 @@
 package edu.du.ict4305.parkingsystem;
 
 import java.time.Instant;
+import java.time.temporal.ChronoUnit;
 
 /**
  * The type Parking charge.
@@ -14,7 +15,6 @@ import java.time.Instant;
  * @Date: 10 /11/22
  */
 public class ParkingCharge {
-
       /**
        * The Lot id.
        */
@@ -27,18 +27,64 @@ public class ParkingCharge {
        * The Amount.
        */
       Money amount;
-
-      /**
-       * Instantiates a new Parking charge.
-       */
-      public ParkingCharge() {
-
-      }
-
       /**
        * The Permit id.
        */
       String permitId;
+
+      /**
+       * The Incurred amount.
+       */
+      double incurredAmount;
+
+      /**
+       * Sets incurred amount.
+       *
+       * @param incurredAmount the incurred amount
+       */
+      public void setIncurredAmount(double incurredAmount) {
+            this.incurredAmount = incurredAmount;
+      }
+
+      /**
+       * Gets number of days incurred.
+       *
+       * @return the number of days incurred
+       */
+      public int getNumberOfDaysIncurred() {
+            return numberOfDaysIncurred;
+      }
+
+      /**
+       * Sets number of days incurred.
+       *
+       * @param numberOfDaysIncurred the number of days incurred
+       */
+      public void setNumberOfDaysIncurred(int numberOfDaysIncurred) {
+            this.numberOfDaysIncurred = numberOfDaysIncurred;
+      }
+
+      /**
+       * The Number of days incurred.
+       */
+      int numberOfDaysIncurred;
+
+      /**
+       * Instantiates a new Parking charge.
+       *
+       * @param lotId                the lot id
+       * @param incurred             the incurred
+       * @param amount               the amount
+       * @param permitId             the permit id
+       * @param numberOfDaysIncurred the number of days incurred
+       */
+      public ParkingCharge(String lotId, Instant incurred, Money amount, String permitId, int numberOfDaysIncurred) {
+            this.lotId = lotId;
+            this.incurred = incurred;
+            this.amount = amount;
+            this.permitId = permitId;
+            this.numberOfDaysIncurred = numberOfDaysIncurred;
+      }
 
       /**
        * Gets permit id.
@@ -86,12 +132,14 @@ public class ParkingCharge {
       }
 
       /**
+       * Lets say we're charging 100c per day
+       * after 30 days how much will the customer have incurred.
        * Sets incurred.
        *
        * @param incurred the incurred
        */
       public void setIncurred(Instant incurred) {
-            this.incurred = incurred;
+            this.incurred = incurred.minus(numberOfDaysIncurred, ChronoUnit.DAYS);
       }
 
       /**
@@ -110,6 +158,15 @@ public class ParkingCharge {
        */
       public void setAmount(Money amount) {
             this.amount = amount;
+      }
+
+      /**
+       * Get incurred amount double.
+       * @return the double
+       */
+      public double getIncurredAmount() {
+            incurredAmount = getAmount().getDollars() * numberOfDaysIncurred;
+            return incurredAmount;
       }
 
       /**

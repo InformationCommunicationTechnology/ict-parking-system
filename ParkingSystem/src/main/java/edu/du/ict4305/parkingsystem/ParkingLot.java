@@ -5,7 +5,11 @@
  */
 package edu.du.ict4305.parkingsystem;
 
+import java.time.Instant;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
 
 /**
  * The type Parking lot.
@@ -81,20 +85,63 @@ public class ParkingLot {
             this.capacity = capacity;
       }
 
+      public  boolean isCapacityFull(){
+            if (getCapacity() <= 0) {
+                  throw new IllegalArgumentException("Parking Lot is full");
+            }else{
+                  return false;
+            }
+      }
+
       /**
        * Entry.
        *
        * @param car the car
        */
       public void entry(Car car) {
-            car.setLicense("YYY:350");
-            car.setPermit("Invalid");
-            car.setType(CarType.COMPACT);
-            car.setPermitExpiration(LocalDate.now());
-            System.out.println("The car that has entered the license is " + car.getLicense());
-            System.out.println("The car that has entered the permit is " + car.getPermit());
-            System.out.println("The car that has entered the car type is " + car.getType());
-            System.out.println("The car that has entered the permit expiration date is " + car.getPermitExpiration());
+//            car.setLicense("YYY:350");
+//            car.setPermit("Invalid");
+//            car.setType(CarType.COMPACT);
+//            car.setPermitExpiration(LocalDate.now());
+//            System.out.println("The car that has entered the license is " + car.getLicense());
+//            System.out.println("The car that has entered the permit is " + car.getPermit());
+//            System.out.println("The car that has entered the car type is " + car.getType());
+//            System.out.println("The car that has entered the permit expiration date is " + car.getPermitExpiration());
+            // ##############################################################################################
+            //                                                                                              #
+            //            ASSIGNMENT: ADD MONEY, PARKING CHARGE, AND PARKING OFFICE CLASSES                 #
+            //                                                                                              #
+            // ##############################################################################################
+
+            List<Customer> customers = new ArrayList<>();
+            List<Car> cars = new ArrayList<>();
+            List<ParkingLot> lots = new ArrayList<>();
+            List<ParkingCharge> charges = new ArrayList<>();
+            customers.add(new Customer("Tafadzwa", "customerId", new Address("4581 S Valdai Way.", "Aurora", "CO", "80015"), "##########"));
+            customers.add(new Customer("Taurai", "303422425", new Address("4581 S Valdai Way.", "Aurora", "CO", "80015"), "##########"));
+            cars.add(new Car("valid", LocalDate.now(), "YYY350", CarType.COMPACT));
+            cars.add(new Car("invalid", LocalDate.now(), "YOY350", CarType.SUV));
+            lots.add(new ParkingLot("4728","4581 S Valdai Way. Aurora CO 80015", 6));
+            lots.add(new ParkingLot("2847","4581 S Valdai Way. Aurora CO 80015", 6));
+
+            ParkingOffice parkingOffice = new ParkingOffice();
+            long cents = 100;
+            int numberOfDaysIncurred = 17;
+            if ( Objects.equals(car.getPermit(), "valid") && !isCapacityFull()) {
+                  System.out.println("Enter the parking lot");
+                  if(car.getType() == CarType.COMPACT){
+                        ParkingCharge parkingCharge = new ParkingCharge("4728", Instant.now(), new Money(cents), "valid",numberOfDaysIncurred);
+                        double regularChargeWithDiscount = parkingCharge.getIncurredAmount() - ((cents/100.0) * .2);
+                        System.out.println("Your total amount is " + regularChargeWithDiscount);
+                  }else {
+                        ParkingCharge parkingCharge = new ParkingCharge("4728", Instant.now(), new Money(cents), "valid", numberOfDaysIncurred);
+                        double regularCharge = parkingCharge.getIncurredAmount();
+                        System.out.println("Your total amount is " + regularCharge);
+                  }
+
+                  charges.add(new ParkingCharge("4728", Instant.now(), new Money(78), "valid", 17));
+                  charges.add(new ParkingCharge("2847", Instant.now(), new Money(78), "invalid", 17));
+            }
       }
 
 }
