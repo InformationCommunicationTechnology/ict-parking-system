@@ -73,8 +73,8 @@ public class ParkingSystem {
 //            ParkingCharge parkingCharge = new ParkingCharge("4728", Instant.now(), new Money(78), "valid",17);
 //            parkingCharge.setIncurred(Instant.now());
             // Lets say you have been parking for 17 days
-            ParkingOffice parkingOffice = new ParkingOffice();
-            parkingOffice.isCarRegistered();
+//            ParkingOffice parkingOffice = new ParkingOffice();
+//            parkingOffice.isCarRegistered();
       }
 
 }

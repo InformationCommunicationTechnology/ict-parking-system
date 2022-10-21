@@ -6,13 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4cb78f78-9c8b-44e9-9843-61206fcfa855" name="Changes" comment="Push the pom.xml">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/du/ict4305/parkingsystem/Money.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/du/ict4305/parkingsystem/Money.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/du/ict4305/parkingsystem/ParkingCharge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/du/ict4305/parkingsystem/ParkingCharge.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/du/ict4305/parkingsystem/ParkingLot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/du/ict4305/parkingsystem/ParkingLot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/du/ict4305/parkingsystem/ParkingOffice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/du/ict4305/parkingsystem/ParkingOffice.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/du/ict4305/parkingsystem/ParkingSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/du/ict4305/parkingsystem/ParkingSystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/du/ict4305/parkingsystem/ParkingLot.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/du/ict4305/parkingsystem/ParkingLot.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/du/ict4305/parkingsystem/ParkingSystem.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/du/ict4305/parkingsystem/ParkingSystem.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,6 +171,8 @@
       <workItem from="1664991171347" duration="13201000" />
       <workItem from="1665082809801" duration="16134000" />
       <workItem from="1665533871147" duration="30123000" />
+      <workItem from="1666185512585" duration="392000" />
+      <workItem from="1666269548106" duration="1586000" />
     </task>
     <task id="LOCAL-00001" summary="Test the Car class getter methods">
       <created>1665086935477</created>
