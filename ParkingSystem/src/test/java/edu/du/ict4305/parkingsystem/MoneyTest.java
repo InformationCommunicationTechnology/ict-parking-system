@@ -22,6 +22,8 @@ public class MoneyTest {
 
       @Test
       public void getDollars() {
+            Money money = new Money(7);
+            assertEquals(0.07,money.getDollars());
       }
 
       @Test

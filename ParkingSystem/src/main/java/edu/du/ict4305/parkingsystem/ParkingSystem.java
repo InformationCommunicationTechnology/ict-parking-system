@@ -70,7 +70,9 @@ public class ParkingSystem {
             ParkingLot parkingLot1 = new ParkingLot("4728", "4581 S Valdai Way. Aurora CO 80015", 6);
             parkingLot1.entry(new Car("valid", LocalDate.now(), "YYY350", CarType.COMPACT));
             parkingLot1.entry(new Car("valid", LocalDate.now(), "YYY350", CarType.SUV));
-//            ParkingCharge parkingCharge = new ParkingCharge("4728", Instant.now(), new Money(78), "valid",17);
+            ParkingCharge parkingCharge = new ParkingCharge("4728", Instant.now(), new Money(78), "valid",17);
+            parkingCharge.setAmount(new Money(7));
+            System.out.println("This is the amount: " + parkingCharge.getAmount().getDollars());
 //            parkingCharge.setIncurred(Instant.now());
             // Lets say you have been parking for 17 days
 //            ParkingOffice parkingOffice = new ParkingOffice();

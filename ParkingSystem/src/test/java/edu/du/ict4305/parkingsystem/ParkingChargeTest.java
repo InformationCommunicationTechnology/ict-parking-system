@@ -6,6 +6,10 @@ package edu.du.ict4305.parkingsystem; /**
 
 import org.junit.jupiter.api.Test;
 
+import java.time.Duration;
+import java.time.Instant;
+import java.time.temporal.ChronoUnit;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
@@ -15,17 +19,22 @@ import static org.junit.jupiter.api.Assertions.*;
  *
  */
 public class ParkingChargeTest {
+      ParkingCharge parkingCharge;
+      Instant incurred = Instant.now();
 
       public ParkingChargeTest() {
-
+            parkingCharge = new ParkingCharge("4728", incurred.minus(17, ChronoUnit.DAYS),new Money(7),"valid",17);
       }
 
       @Test
       public void setIncurredAmount() {
+            parkingCharge.setIncurredAmount(67);
+            assertEquals(67,parkingCharge.getIncurredAmount());
       }
 
       @Test
       public void getNumberOfDaysIncurred() {
+            assertEquals(17,parkingCharge.getNumberOfDaysIncurred());
       }
 
       @Test
@@ -34,6 +43,7 @@ public class ParkingChargeTest {
 
       @Test
       public void getPermitId() {
+            assertEquals("valid",parkingCharge.getPermitId());
       }
 
       @Test
@@ -42,6 +52,7 @@ public class ParkingChargeTest {
 
       @Test
       public void getLotId() {
+            assertEquals("4728", parkingCharge.getLotId());
       }
 
       @Test
@@ -50,6 +61,7 @@ public class ParkingChargeTest {
 
       @Test
       public void getIncurred() {
+            assertEquals( incurred.minus(17, ChronoUnit.DAYS),parkingCharge.getIncurred());
       }
 
       @Test
@@ -58,6 +70,7 @@ public class ParkingChargeTest {
 
       @Test
       public void getAmount() {
+            assertEquals(new Money(7).getDollars(),parkingCharge.getAmount().getDollars());
       }
 
       @Test
@@ -66,6 +79,7 @@ public class ParkingChargeTest {
 
       @Test
       public void getIncurredAmount() {
+            assertEquals(1.1900000000000002,parkingCharge.getIncurredAmount());
       }
 
       @Test
