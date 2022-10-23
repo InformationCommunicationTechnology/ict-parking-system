@@ -5,9 +5,10 @@
  */
 package edu.du.ict4305.parkingsystem;
 
+import java.time.Instant;
 import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * The type Parking office.
@@ -42,11 +43,20 @@ public class ParkingOffice {
        */
       List<ParkingCharge> charges;
       Car car;
+      ParkingLot parkingLot;
 
       /**
        * Instantiates a new Parking office.
        */
-      public ParkingOffice() {
+      public ParkingOffice(String name, String address, List<Customer> customers, List<Car> cars, List<ParkingLot> lots, List<ParkingCharge> charges, Car car, ParkingLot parkingLot) {
+            this.name = name;
+            this.address = address;
+            this.customers = customers;
+            this.cars = cars;
+            this.lots = lots;
+            this.charges = charges;
+            this.car = car;
+            this.parkingLot = parkingLot;
 
       }
 
@@ -61,8 +71,9 @@ public class ParkingOffice {
       public Customer register(String name, Address address, String phone) { // You changed this line of code to start using Address instead of String
             if (name.isEmpty() || address == null || phone.isEmpty()) {
                   throw new IllegalArgumentException("Either name or address or phone is empty!!");
-            }else {
+            } else {
                   String customerId = "303422425";
+                  customers.add(new Customer(name, customerId, address, phone));
                   return new Customer(name, customerId, address, phone);
             }
       }
@@ -78,17 +89,31 @@ public class ParkingOffice {
       public Car register(Customer c, String license, CarType t) {
             if (c == null || license.isEmpty() || t == null) {
                   throw new IllegalArgumentException("Customer is not registered!");
-            }else{
-                  String permit = "valid";
-                  car = new Car(permit, LocalDate.now(), license, t);
-                  cars.add(car);
-                  return car;
+            } else {
+                  if (isCarRegistered()) {
+                        throw new IllegalArgumentException("The car is already registered registered!");
+                  } else {
+                        String permit = "valid";
+                        car = new Car(permit, LocalDate.now(), license, t);
+                        cars.add(car);
+                        return car;
+                  }
+
             }
 
       }
-      public void isCarRegistered(){
-            for (Car car1: cars) {
-                  System.out.println("Check these cars " + car1);
+
+      public boolean isCarRegistered() {
+            return cars.contains(car);
+      }
+
+      public List<ParkingLot> addCarToParkingLot() {
+
+            if (Objects.equals(car.getPermit(), "valid") && !(parkingLot.isCapacityFull())) {
+                  lots.add(parkingLot);
+                  return lots;
+            } else {
+                  throw new IllegalArgumentException("The either the parking lot is full or you have invalid permit");
             }
       }
 
@@ -98,45 +123,16 @@ public class ParkingOffice {
        * @return the money
        */
       public Money addCharge(ParkingCharge parkingCharge) {
+            if (!lots.contains(parkingLot) && !(addCarToParkingLot() == null)) {
+                  System.out.println("The size is " + lots.size());
+                  return parkingCharge.getAmount();
+            } else {
+                  charges.add(parkingCharge);
+                  return parkingCharge.getAmount();
+            }
 
-            return parkingCharge.getAmount();
       }
 
-      /**
-       * Gets name.
-       *
-       * @return the name
-       */
-      public String getName() {
-            return name;
-      }
-
-      /**
-       * Sets name.
-       *
-       * @param name the name
-       */
-      public void setName(String name) {
-            this.name = name;
-      }
-
-      /**
-       * Gets address.
-       *
-       * @return the address
-       */
-      public String getAddress() {
-            return address;
-      }
-
-      /**
-       * Sets address.
-       *
-       * @param address the address
-       */
-      public void setAddress(String address) {
-            this.address = address;
-      }
 
       /**
        * Gets customers.
@@ -147,14 +143,6 @@ public class ParkingOffice {
             return customers;
       }
 
-      /**
-       * Sets customers.
-       *
-       * @param customers the customers
-       */
-      public void setCustomers(List<Customer> customers) {
-            this.customers = customers;
-      }
 
       /**
        * Gets cars.
@@ -166,15 +154,6 @@ public class ParkingOffice {
       }
 
       /**
-       * Sets cars.
-       *
-       * @param cars the cars
-       */
-      public void setCars(List<Car> cars) {
-            this.cars = cars;
-      }
-
-      /**
        * Gets lots.
        *
        * @return the lots
@@ -183,14 +162,6 @@ public class ParkingOffice {
             return lots;
       }
 
-      /**
-       * Sets lots.
-       *
-       * @param lots the lots
-       */
-      public void setLots(List<ParkingLot> lots) {
-            this.lots = lots;
-      }
 
       /**
        * Gets charges.
@@ -201,12 +172,4 @@ public class ParkingOffice {
             return charges;
       }
 
-      /**
-       * Sets charges.
-       *
-       * @param charges the charges
-       */
-      public void setCharges(List<ParkingCharge> charges) {
-            this.charges = charges;
-      }
 }

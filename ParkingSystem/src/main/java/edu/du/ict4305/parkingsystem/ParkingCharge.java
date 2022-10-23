@@ -36,6 +36,27 @@ public class ParkingCharge {
        * The Incurred amount.
        */
       double incurredAmount;
+      /**
+       * The Number of days incurred.
+       */
+      int numberOfDaysIncurred;
+
+      /**
+       * Instantiates a new Parking charge.
+       *
+       * @param lotId                the lot id
+       * @param incurred             the incurred
+       * @param amount               the amount
+       * @param permitId             the permit id
+       * @param numberOfDaysIncurred the number of days incurred
+       */
+      public ParkingCharge(String lotId, Instant incurred, Money amount, String permitId, int numberOfDaysIncurred) {
+            this.lotId = lotId;
+            this.incurred = incurred;
+            this.amount = amount;
+            this.permitId = permitId;
+            this.numberOfDaysIncurred = numberOfDaysIncurred;
+      }
 
       /**
        * Sets incurred amount.
@@ -61,28 +82,6 @@ public class ParkingCharge {
        * @param numberOfDaysIncurred the number of days incurred
        */
       public void setNumberOfDaysIncurred(int numberOfDaysIncurred) {
-            this.numberOfDaysIncurred = numberOfDaysIncurred;
-      }
-
-      /**
-       * The Number of days incurred.
-       */
-      int numberOfDaysIncurred;
-
-      /**
-       * Instantiates a new Parking charge.
-       *
-       * @param lotId                the lot id
-       * @param incurred             the incurred
-       * @param amount               the amount
-       * @param permitId             the permit id
-       * @param numberOfDaysIncurred the number of days incurred
-       */
-      public ParkingCharge(String lotId, Instant incurred, Money amount, String permitId, int numberOfDaysIncurred) {
-            this.lotId = lotId;
-            this.incurred = incurred;
-            this.amount = amount;
-            this.permitId = permitId;
             this.numberOfDaysIncurred = numberOfDaysIncurred;
       }
 
@@ -162,10 +161,12 @@ public class ParkingCharge {
 
       /**
        * Get incurred amount double.
+       *
        * @return the double
        */
       public double getIncurredAmount() {
             incurredAmount = getAmount().getDollars() * numberOfDaysIncurred;
+            System.out.println("Number of days incuured is " + numberOfDaysIncurred);
             return incurredAmount;
       }
 
@@ -173,6 +174,6 @@ public class ParkingCharge {
        * @return
        */
       public String toString() {
-            return "";
+            return "The parking charge is " + getIncurredAmount() + " for " + numberOfDaysIncurred + " days";
       }
 }

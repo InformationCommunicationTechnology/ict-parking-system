@@ -117,14 +117,7 @@ public class ParkingLot {
             List<Car> cars = new ArrayList<>();
             List<ParkingLot> lots = new ArrayList<>();
             List<ParkingCharge> charges = new ArrayList<>();
-            customers.add(new Customer("Tafadzwa", "customerId", new Address("4581 S Valdai Way.", "Aurora", "CO", "80015"), "##########"));
-            customers.add(new Customer("Taurai", "303422425", new Address("4581 S Valdai Way.", "Aurora", "CO", "80015"), "##########"));
-            cars.add(new Car("valid", LocalDate.now(), "YYY350", CarType.COMPACT));
-            cars.add(new Car("invalid", LocalDate.now(), "YOY350", CarType.SUV));
-            lots.add(new ParkingLot("4728","4581 S Valdai Way. Aurora CO 80015", 6));
-            lots.add(new ParkingLot("2847","4581 S Valdai Way. Aurora CO 80015", 6));
-
-            ParkingOffice parkingOffice = new ParkingOffice();
+            ParkingOffice parkingOffice = new ParkingOffice("luther","4581 S Valdai Way. Aurora CO 80015",customers,cars,lots,charges,new Car("valid",LocalDate.now(),"OOY350",CarType.COMPACT),new ParkingLot("lotId", "My Address", 90));
             long cents = 100;
             int numberOfDaysIncurred = 17;
             if ( Objects.equals(car.getPermit(), "valid") && !isCapacityFull()) {
@@ -139,8 +132,6 @@ public class ParkingLot {
                         System.out.println("Your total amount is " + regularCharge);
                   }
 
-                  charges.add(new ParkingCharge("4728", Instant.now(), new Money(78), "valid", 17));
-                  charges.add(new ParkingCharge("2847", Instant.now(), new Money(78), "invalid", 17));
             }
       }
 

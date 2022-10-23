@@ -41,6 +41,6 @@ public class Money {
        * @return
        */
       public String toString() {
-            return "";
+            return "$" + getDollars();
       }
 }
