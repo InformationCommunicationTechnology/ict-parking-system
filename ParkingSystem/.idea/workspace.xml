@@ -11,12 +11,9 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/du/ict4305/parkingsystem/ParkingLot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/du/ict4305/parkingsystem/ParkingLot.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/du/ict4305/parkingsystem/ParkingOffice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/du/ict4305/parkingsystem/ParkingOffice.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/du/ict4305/parkingsystem/ParkingSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/du/ict4305/parkingsystem/ParkingSystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/edu/du/ict4305/parkingsystem/ParkingChargeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/edu/du/ict4305/parkingsystem/ParkingChargeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/edu/du/ict4305/parkingsystem/MoneyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/edu/du/ict4305/parkingsystem/MoneyTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/edu/du/ict4305/parkingsystem/ParkingOfficeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/edu/du/ict4305/parkingsystem/ParkingOfficeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/du/ict4305/parkingsystem/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/du/ict4305/parkingsystem/Customer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/edu/du/ict4305/parkingsystem/ParkingSystem.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/du/ict4305/parkingsystem/ParkingSystem.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/edu/du/ict4305/parkingsystem/CarTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/edu/du/ict4305/parkingsystem/CarTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/edu/du/ict4305/parkingsystem/ParkingLotTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/edu/du/ict4305/parkingsystem/ParkingLotTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +80,7 @@
       <recent name="edu.du.ict4305.parkingsystem" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ParkingSystem">
+  <component name="RunManager" selected="JUnit.ParkingOfficeTest">
     <configuration name="ParkingSystem" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="edu.du.ict4305.parkingsystem.ParkingSystem" />
       <module name="ParkingSystem" />
@@ -97,7 +94,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ParkingOfficeTest.getCars" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MoneyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ParkingSystem" />
       <extension name="coverage">
         <pattern>
@@ -106,14 +103,29 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="edu.du.ict4305.parkingsystem" />
-      <option name="MAIN_CLASS_NAME" value="edu.du.ict4305.parkingsystem.ParkingOfficeTest" />
-      <option name="METHOD_NAME" value="getCars" />
+      <option name="MAIN_CLASS_NAME" value="edu.du.ict4305.parkingsystem.MoneyTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MoneyTest.testToString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ParkingSystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.du.ict4305.parkingsystem.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="edu.du.ict4305.parkingsystem" />
+      <option name="MAIN_CLASS_NAME" value="edu.du.ict4305.parkingsystem.MoneyTest" />
+      <option name="METHOD_NAME" value="testToString" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ParkingOfficeTest.getCharges" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ParkingChargeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ParkingSystem" />
       <extension name="coverage">
         <pattern>
@@ -122,14 +134,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="edu.du.ict4305.parkingsystem" />
-      <option name="MAIN_CLASS_NAME" value="edu.du.ict4305.parkingsystem.ParkingOfficeTest" />
-      <option name="METHOD_NAME" value="getCharges" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="edu.du.ict4305.parkingsystem.ParkingChargeTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ParkingOfficeTest.getCustomers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ParkingOfficeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ParkingSystem" />
       <extension name="coverage">
         <pattern>
@@ -139,35 +150,18 @@
       </extension>
       <option name="PACKAGE_NAME" value="edu.du.ict4305.parkingsystem" />
       <option name="MAIN_CLASS_NAME" value="edu.du.ict4305.parkingsystem.ParkingOfficeTest" />
-      <option name="METHOD_NAME" value="getCustomers" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ParkingOfficeTest.getLots" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ParkingSystem" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="edu.du.ict4305.parkingsystem.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="edu.du.ict4305.parkingsystem" />
-      <option name="MAIN_CLASS_NAME" value="edu.du.ict4305.parkingsystem.ParkingOfficeTest" />
-      <option name="METHOD_NAME" value="getLots" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ParkingOfficeTest" />
+        <item itemvalue="JUnit.ParkingChargeTest" />
+        <item itemvalue="JUnit.MoneyTest" />
+        <item itemvalue="JUnit.MoneyTest.testToString" />
         <item itemvalue="Application.ParkingSystem" />
-        <item itemvalue="JUnit.ParkingOfficeTest.getCars" />
-        <item itemvalue="JUnit.ParkingOfficeTest.getCharges" />
-        <item itemvalue="JUnit.ParkingOfficeTest.getLots" />
-        <item itemvalue="JUnit.ParkingOfficeTest.getCustomers" />
       </list>
     </recent_temporary>
   </component>
@@ -185,7 +179,7 @@
       <workItem from="1665082809801" duration="16134000" />
       <workItem from="1665533871147" duration="30123000" />
       <workItem from="1666185512585" duration="392000" />
-      <workItem from="1666269548106" duration="18275000" />
+      <workItem from="1666269548106" duration="32863000" />
     </task>
     <task id="LOCAL-00001" summary="Test the Car class getter methods">
       <created>1665086935477</created>

@@ -117,7 +117,7 @@ public class ParkingLot {
             List<Car> cars = new ArrayList<>();
             List<ParkingLot> lots = new ArrayList<>();
             List<ParkingCharge> charges = new ArrayList<>();
-            ParkingOffice parkingOffice = new ParkingOffice("luther","4581 S Valdai Way. Aurora CO 80015",customers,cars,lots,charges,new Car("valid",LocalDate.now(),"OOY350",CarType.COMPACT));
+            ParkingOffice parkingOffice = new ParkingOffice("luther","4581 S Valdai Way. Aurora CO 80015",customers,cars,lots,charges,new Car("valid",LocalDate.now(),"OOY350",CarType.COMPACT),new ParkingLot("lotId", "My Address", 90));
             long cents = 100;
             int numberOfDaysIncurred = 17;
             if ( Objects.equals(car.getPermit(), "valid") && !isCapacityFull()) {

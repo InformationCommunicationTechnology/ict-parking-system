@@ -28,5 +28,7 @@ public class MoneyTest {
 
       @Test
       public void testToString() {
+            Money money = new Money(200);
+            assertEquals("$2.0",money.toString());
       }
 }

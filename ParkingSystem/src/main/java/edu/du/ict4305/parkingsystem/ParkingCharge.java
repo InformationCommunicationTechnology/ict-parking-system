@@ -161,6 +161,7 @@ public class ParkingCharge {
 
       /**
        * Get incurred amount double.
+       *
        * @return the double
        */
       public double getIncurredAmount() {

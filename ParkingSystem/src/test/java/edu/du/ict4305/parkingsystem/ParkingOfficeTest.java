@@ -21,44 +21,54 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class ParkingOfficeTest {
       ParkingOffice parkingOffice;
+      /**
+       * The Name.
+       */
+      String name;
+      /**
+       * The Address.
+       */
+      String address;
+      /**
+       * The Customers.
+       */
+      List<Customer> customers;
+      /**
+       * The Cars.
+       */
+      List<Car> cars;
+      /**
+       * The Lots.
+       */
+      List<ParkingLot> lots;
+      /**
+       * The Charges.
+       */
+      List<ParkingCharge> charges;
+      Car car;
       public ParkingOfficeTest() {
-      parkingOffice = new ParkingOffice();
+
       }
 
       @Test
       public void register() {
+
       }
 
       @Test
       public void testRegister() {
+
       }
 
       @Test
       public void isCarRegistered() {
+            List<Car> cars = new ArrayList<>();
+            cars.add(new Car("valid",LocalDate.now(),"OOY350",CarType.COMPACT));
+
       }
 
       @Test
       public void addCharge() {
-      }
-
-      @Test
-      public void getName() {
-            List<Customer> customers = new ArrayList<>();
-            customers.add(new Customer("Tafadzwa", "customerId", new Address("4581 S Valdai Way.", "Aurora", "CO", "80015"), "##########"));
-            assertEquals("luther", parkingOffice.getName());
-      }
-
-      @Test
-      public void setName() {
-      }
-
-      @Test
-      public void getAddress() {
-            assertEquals("4581 S Valdai Way. Aurora CO 80015", parkingOffice.getAddress());
-      }
-
-      @Test
-      public void setAddress() {
       }
 
       @Test
@@ -148,5 +158,10 @@ public class ParkingOfficeTest {
 
       @Test
       public void setCharges() {
+      }
+
+      @Test
+      public void addCarToParkingLot() {
+
       }
 }
