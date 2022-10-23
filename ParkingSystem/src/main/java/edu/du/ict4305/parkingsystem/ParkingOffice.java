@@ -46,8 +46,14 @@ public class ParkingOffice {
       /**
        * Instantiates a new Parking office.
        */
-      public ParkingOffice() {
-
+      public ParkingOffice(String name, String address, List<Customer> customers, List<Car> cars, List<ParkingLot> lots, List<ParkingCharge> charges, Car car) {
+            this.name = name;
+            this.address = address;
+            this.customers = customers;
+            this.cars = cars;
+            this.lots = lots;
+            this.charges = charges;
+            this.car = car;
       }
 
       /**
@@ -63,6 +69,7 @@ public class ParkingOffice {
                   throw new IllegalArgumentException("Either name or address or phone is empty!!");
             }else {
                   String customerId = "303422425";
+                  customers.add(new Customer(name, customerId, address, phone));
                   return new Customer(name, customerId, address, phone);
             }
       }
@@ -147,14 +154,6 @@ public class ParkingOffice {
             return customers;
       }
 
-      /**
-       * Sets customers.
-       *
-       * @param customers the customers
-       */
-      public void setCustomers(List<Customer> customers) {
-            this.customers = customers;
-      }
 
       /**
        * Gets cars.
@@ -166,15 +165,6 @@ public class ParkingOffice {
       }
 
       /**
-       * Sets cars.
-       *
-       * @param cars the cars
-       */
-      public void setCars(List<Car> cars) {
-            this.cars = cars;
-      }
-
-      /**
        * Gets lots.
        *
        * @return the lots
@@ -183,14 +173,6 @@ public class ParkingOffice {
             return lots;
       }
 
-      /**
-       * Sets lots.
-       *
-       * @param lots the lots
-       */
-      public void setLots(List<ParkingLot> lots) {
-            this.lots = lots;
-      }
 
       /**
        * Gets charges.
