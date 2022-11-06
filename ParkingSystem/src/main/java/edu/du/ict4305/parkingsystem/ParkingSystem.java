@@ -39,7 +39,7 @@ public class ParkingSystem {
             List<ParkingCharge> charges = new ArrayList<>();
 
             ParkingCharge parkingCharge = new ParkingCharge("4728", Instant.now(), new Money(200), "valid", 17);
-            ParkingOffice parkingOffice = new ParkingOffice("luther", "4581 S Valdai Way. Aurora CO 80015", customers, cars, lots, charges, new Car("valid", LocalDate.now(), "OOY350", CarType.COMPACT),new ParkingLot("lotId", "My Address", 90));
+            ParkingOffice parkingOffice = new ParkingOffice("luther", "4581 S Valdai Way. Aurora CO 80015", customers, cars, lots, charges, new Car("valid", LocalDate.now(), "OOY350", CarType.COMPACT), new ParkingLot("lotId", "My Address", 90));
 
             parkingOffice.register("customer", new Address("4581 S Valdai Way.", "Aurora", "CO", "80015"), "##########");
             System.out.println("The size of the customers is " + customers.size());
@@ -49,6 +49,11 @@ public class ParkingSystem {
             System.out.println("The parking charge is " + parkingOffice.addCharge(new ParkingCharge("4728", Instant.now(), new Money(200), "valid", 17)));
 
             parkingOffice.addCarToParkingLot();
+            Collection <String > permits;
+            permits = parkingOffice.getPermitAllIds();
+            System.out.println(permits);
+            permits = parkingOffice.getCustomerPermitIds(customer);
+            System.out.println("Here's the permit id for " + customer.getName() + " : " + permits);
 
       }
 

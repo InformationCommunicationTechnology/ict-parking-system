@@ -5,10 +5,8 @@
  */
 package edu.du.ict4305.parkingsystem;
 
-import java.time.Instant;
 import java.time.LocalDate;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 /**
  * The type Parking office.
@@ -170,6 +168,38 @@ public class ParkingOffice {
        */
       public List<ParkingCharge> getCharges() {
             return charges;
+      }
+
+      /**
+       * @return customerIds
+       */
+      public Collection<String> getCustomerIds() {
+            Collection<String> customerIds = new ArrayList<>();
+            for (Customer customer : customers) {
+                  customerIds.add(customer.getCustomerId());
+            }
+            return customerIds;
+      }
+
+      /**
+       * @return permitIds
+       */
+      public Collection<String> getPermitAllIds() {
+            Collection<String> permitIds = new ArrayList<>();
+            for (ParkingCharge parkingCharge : charges) {
+                  permitIds.add(parkingCharge.getPermitId());
+            }
+            return permitIds;
+      }
+
+      /**
+       * @param customer
+       * @return permitIds
+       */
+      public  Collection<String> getCustomerPermitIds(Customer customer){
+            Collection <String>permitIds = new ArrayList<>();
+            permitIds.add(customer.getCustomerId());
+            return  permitIds;
       }
 
 }

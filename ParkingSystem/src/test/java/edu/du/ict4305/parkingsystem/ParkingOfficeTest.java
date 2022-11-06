@@ -9,6 +9,7 @@ import org.junit.jupiter.api.Test;
 import java.time.Instant;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -163,5 +164,44 @@ public class ParkingOfficeTest {
       @Test
       public void addCarToParkingLot() {
 
+      }
+
+      @Test
+      public void getCustomerIds() {
+            Collection<String> permitIds = new ArrayList<>();
+            List<Customer> customers = new ArrayList<>();
+            customers.add(new Customer("Tafadzwa", "customerId", new Address("4581 S Valdai Way.", "Aurora", "CO", "80015"), "##########"));
+            parkingOffice = new ParkingOffice("luther", "4581 S Valdai Way. Aurora CO 80015", customers, cars, lots, charges, new Car("valid", LocalDate.now(), "OOY350", CarType.COMPACT),new ParkingLot("lotId", "My Address", 90));
+            for(Customer customer: customers){
+                  permitIds.add(customer.getCustomerId());
+            }
+            assertEquals(permitIds.size(),parkingOffice.getCustomerPermitIds(new Customer("luther", "303422428",  new Address("4581 S Valdai Way.", "Aurora", "CO", "80015"), "### ### ####")).size());
+      }
+
+      @Test
+      public void getPermitAllIds() {
+            Collection<String> permitIds = new ArrayList<>();
+            List<ParkingCharge> charges = new ArrayList<>();
+            charges.add(new ParkingCharge("4728", Instant.now(), new Money(200), "valid", 17));
+            charges.add(new ParkingCharge("2847", Instant.now(), new Money(78), "invalid", 17));
+            parkingOffice = new ParkingOffice("luther", "4581 S Valdai Way. Aurora CO 80015", customers, cars, lots, charges, new Car("valid", LocalDate.now(), "OOY350", CarType.COMPACT),new ParkingLot("lotId", "My Address", 90));
+            for (ParkingCharge parkingCharge : charges) {
+                  permitIds.add(parkingCharge.getPermitId());
+            }
+            assertEquals(permitIds.size(),parkingOffice.getPermitAllIds().size());
+      }
+
+      @Test
+      public void getCustomerPermitIds() {
+            Collection<String> customerPermitIds = new ArrayList<>();
+            List<Customer> customers = new ArrayList<>();
+            List<ParkingCharge> charges = new ArrayList<>();
+            charges.add(new ParkingCharge("4728", Instant.now(), new Money(200), "valid", 17));
+            customers.add(new Customer("luther", "303422428",  new Address("4581 S Valdai Way.", "Aurora", "CO", "80015"), "### ### ####"));
+            parkingOffice = new ParkingOffice("luther", "4581 S Valdai Way. Aurora CO 80015", customers, cars, lots, charges, new Car("valid", LocalDate.now(), "OOY350", CarType.COMPACT),new ParkingLot("lotId", "My Address", 90));
+            for (Customer customer : customers) {
+                  customerPermitIds.add(customer.getCustomerId());
+            }
+            assertEquals(1,parkingOffice.getCustomerPermitIds(new Customer("luther", "303422428",  new Address("4581 S Valdai Way.", "Aurora", "CO", "80015"), "### ### ####")).size());
       }
 }

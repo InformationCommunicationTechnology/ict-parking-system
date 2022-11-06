@@ -7,6 +7,7 @@ package edu.du.ict4305.parkingsystem;
 
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
+import java.util.Objects;
 
 /**
  * The type Parking charge.
@@ -175,5 +176,18 @@ public class ParkingCharge {
        */
       public String toString() {
             return "The parking charge is " + getIncurredAmount() + " for " + numberOfDaysIncurred + " days";
+      }
+
+      @Override
+      public boolean equals(Object o) {
+            if (this == o) return true;
+            if (o == null || getClass() != o.getClass()) return false;
+            ParkingCharge that = (ParkingCharge) o;
+            return Double.compare(that.incurredAmount, incurredAmount) == 0 && numberOfDaysIncurred == that.numberOfDaysIncurred && Objects.equals(lotId, that.lotId) && Objects.equals(incurred, that.incurred) && Objects.equals(amount, that.amount) && Objects.equals(permitId, that.permitId);
+      }
+
+      @Override
+      public int hashCode() {
+            return Objects.hash(lotId, incurred, amount, permitId, incurredAmount, numberOfDaysIncurred);
       }
 }
