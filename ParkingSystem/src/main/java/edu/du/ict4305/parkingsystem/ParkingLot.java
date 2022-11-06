@@ -148,4 +148,12 @@ public class ParkingLot {
             }
       }
 
+      @Override
+      public String toString() {
+            return "ParkingLot{" +
+                    "lotId='" + lotId + '\'' +
+                    ", address='" + address + '\'' +
+                    ", capacity=" + capacity +
+                    '}';
+      }
 }

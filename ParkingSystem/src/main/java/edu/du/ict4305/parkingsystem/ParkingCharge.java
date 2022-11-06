@@ -171,13 +171,6 @@ public class ParkingCharge {
             return incurredAmount;
       }
 
-      /**
-       * @return
-       */
-      public String toString() {
-            return "The parking charge is " + getIncurredAmount() + " for " + numberOfDaysIncurred + " days";
-      }
-
       @Override
       public boolean equals(Object o) {
             if (this == o) return true;
@@ -189,5 +182,20 @@ public class ParkingCharge {
       @Override
       public int hashCode() {
             return Objects.hash(lotId, incurred, amount, permitId, incurredAmount, numberOfDaysIncurred);
+      }
+
+      /**
+       * @return
+       */
+      @Override
+      public String toString() {
+            return "ParkingCharge{" +
+                    "lotId='" + lotId + '\'' +
+                    ", incurred=" + incurred +
+                    ", amount=" + amount +
+                    ", permitId='" + permitId + '\'' +
+                    ", incurredAmount=" + incurredAmount +
+                    ", numberOfDaysIncurred=" + numberOfDaysIncurred +
+                    '}';
       }
 }

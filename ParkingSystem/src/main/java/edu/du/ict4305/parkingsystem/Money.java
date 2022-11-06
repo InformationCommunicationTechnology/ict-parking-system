@@ -40,7 +40,10 @@ public class Money {
       /**
        * @return
        */
+      @Override
       public String toString() {
-            return "$" + getDollars();
+            return "Money{" +
+                    "cents=" + cents +
+                    '}';
       }
 }

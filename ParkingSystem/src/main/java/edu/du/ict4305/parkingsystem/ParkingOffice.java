@@ -198,8 +198,23 @@ public class ParkingOffice {
        */
       public  Collection<String> getCustomerPermitIds(Customer customer){
             Collection <String>permitIds = new ArrayList<>();
-            permitIds.add(customer.getCustomerId());
+            if(customers.contains(customer)){
+                  permitIds.add(customer.getCustomerId());
+            }
             return  permitIds;
       }
 
+      @Override
+      public String toString() {
+            return "ParkingOffice{" +
+                    "name='" + name + '\'' +
+                    ", address='" + address + '\'' +
+                    ", customers=" + customers +
+                    ", cars=" + cars +
+                    ", lots=" + lots +
+                    ", charges=" + charges +
+                    ", car=" + car +
+                    ", parkingLot=" + parkingLot +
+                    '}';
+      }
 }

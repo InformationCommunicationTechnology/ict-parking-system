@@ -126,4 +126,14 @@ public class Car {
             System.out.println("I'm here");
             return Objects.hash(permit, permitExpiration, license, type);
       }
+
+      @Override
+      public String toString() {
+            return "Car{" +
+                    "permit='" + permit + '\'' +
+                    ", permitExpiration=" + permitExpiration +
+                    ", license='" + license + '\'' +
+                    ", type=" + type +
+                    '}';
+      }
 }

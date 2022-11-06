@@ -37,23 +37,19 @@ public class ParkingSystem {
             List<Car> cars = new ArrayList<>();
             List<ParkingLot> lots = new ArrayList<>();
             List<ParkingCharge> charges = new ArrayList<>();
-
             ParkingCharge parkingCharge = new ParkingCharge("4728", Instant.now(), new Money(200), "valid", 17);
+            charges.add(parkingCharge);
             ParkingOffice parkingOffice = new ParkingOffice("luther", "4581 S Valdai Way. Aurora CO 80015", customers, cars, lots, charges, new Car("valid", LocalDate.now(), "OOY350", CarType.COMPACT), new ParkingLot("lotId", "My Address", 90));
-
             parkingOffice.register("customer", new Address("4581 S Valdai Way.", "Aurora", "CO", "80015"), "##########");
             System.out.println("The size of the customers is " + customers.size());
             parkingOffice.register(new Customer("luther", "303422428", address, "### ### ####"), "OOY350", CarType.COMPACT);
             System.out.println("The size of the cars is " + cars.size());
 
             System.out.println("The parking charge is " + parkingOffice.addCharge(new ParkingCharge("4728", Instant.now(), new Money(200), "valid", 17)));
-
             parkingOffice.addCarToParkingLot();
-            Collection <String > permits;
-            permits = parkingOffice.getPermitAllIds();
-            System.out.println(permits);
-            permits = parkingOffice.getCustomerPermitIds(customer);
-            System.out.println("Here's the permit id for " + customer.getName() + " : " + permits);
+            System.out.println("Here's all the permits ids" + parkingOffice.getPermitAllIds());
+            System.out.println("Here's the permit id for " + customer.getName() + " : " + parkingOffice.getCustomerPermitIds(customer));
+            System.out.println("Get the customer id " + parkingOffice.getCustomerIds());
 
       }
 

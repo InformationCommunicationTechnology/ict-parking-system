@@ -127,4 +127,15 @@ public class Address {
             getStreetAddress2 = getStreetAddress1() + "\n" + getCity() + ", " + getState() + " " + getZipCode();
             return getStreetAddress2;
       }
+
+      @Override
+      public String toString() {
+            return "Address{" +
+                    "streetAddress1='" + streetAddress1 + '\'' +
+                    ", getStreetAddress2='" + getStreetAddress2 + '\'' +
+                    ", city='" + city + '\'' +
+                    ", state='" + state + '\'' +
+                    ", zipCode='" + zipCode + '\'' +
+                    '}';
+      }
 }

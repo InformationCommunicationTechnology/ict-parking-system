@@ -126,4 +126,14 @@ public class Customer {
       public int hashCode() {
             return Objects.hash(customerId, name, address, phoneNumber);
       }
+
+      @Override
+      public String toString() {
+            return "Customer{" +
+                    "customerId='" + customerId + '\'' +
+                    ", name='" + name + '\'' +
+                    ", address=" + address +
+                    ", phoneNumber='" + phoneNumber + '\'' +
+                    '}';
+      }
 }
