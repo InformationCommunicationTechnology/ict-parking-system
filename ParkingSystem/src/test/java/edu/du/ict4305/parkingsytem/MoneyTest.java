@@ -1,4 +1,4 @@
-package edu.du.ict4305.parkingsystem; /**
+package edu.du.ict4305.parkingsytem; /**
  * @Course: ICT 4305
  * @Project: ParkingSystem
  * @Instructor: Dr. Sherri Maciosek

@@ -6,15 +6,29 @@
   <component name="ChangeListManager">
     <list default="true" id="4cb78f78-9c8b-44e9-9843-61206fcfa855" name="Changes" comment="Push the pom.xml">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/du/ict4305/parkingsystem/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/du/ict4305/parkingsystem/Address.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/du/ict4305/parkingsystem/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/du/ict4305/parkingsystem/Car.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/du/ict4305/parkingsystem/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/du/ict4305/parkingsystem/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/du/ict4305/parkingsystem/Money.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/du/ict4305/parkingsystem/Money.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/du/ict4305/parkingsystem/ParkingCharge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/du/ict4305/parkingsystem/ParkingCharge.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/du/ict4305/parkingsystem/ParkingLot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/du/ict4305/parkingsystem/ParkingLot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/du/ict4305/parkingsystem/ParkingOffice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/du/ict4305/parkingsystem/ParkingOffice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/du/ict4305/parkingsystem/ParkingSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/du/ict4305/parkingsystem/ParkingSystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/du/ict4305/parkingsystem/ParkingSystem.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/du/ict4305/parkingsystem/ParkingSystem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/du/ict4305/parkingsystem/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/du/ict4305/parkingsytem/Address.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/du/ict4305/parkingsystem/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/du/ict4305/parkingsytem/Car.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/du/ict4305/parkingsystem/CarType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/du/ict4305/parkingsytem/CarType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/du/ict4305/parkingsystem/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/du/ict4305/parkingsytem/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/du/ict4305/parkingsystem/Money.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/du/ict4305/parkingsytem/Money.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/du/ict4305/parkingsystem/ParkingCharge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/du/ict4305/parkingsytem/ParkingCharge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/du/ict4305/parkingsystem/ParkingLot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/du/ict4305/parkingsytem/ParkingLot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/du/ict4305/parkingsystem/ParkingOffice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/du/ict4305/parkingsytem/ParkingOffice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/du/ict4305/parkingsystem/ParkingSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/du/ict4305/parkingsytem/ParkingSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/edu/du/ict4305/parkingsystem/AddressTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/edu/du/ict4305/parkingsytem/AddressTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/edu/du/ict4305/parkingsystem/CarTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/edu/du/ict4305/parkingsytem/CarTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/edu/du/ict4305/parkingsystem/CustomerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/edu/du/ict4305/parkingsytem/CustomerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/edu/du/ict4305/parkingsystem/MoneyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/edu/du/ict4305/parkingsytem/MoneyTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/edu/du/ict4305/parkingsystem/ParkingChargeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/edu/du/ict4305/parkingsytem/ParkingChargeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/edu/du/ict4305/parkingsystem/ParkingLotTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/edu/du/ict4305/parkingsytem/ParkingLotTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/edu/du/ict4305/parkingsystem/ParkingOfficeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/edu/du/ict4305/parkingsytem/ParkingOfficeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/du/ict4305/parkingsystem/Address.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/du/ict4305/parkingsystem/Car.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/du/ict4305/parkingsystem/CarType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/du/ict4305/parkingsystem/Customer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/du/ict4305/parkingsystem/ParkingLot.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/du/ict4305/parkingsystem/ParkingSystem.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,11 +97,11 @@
   </component>
   <component name="RunManager" selected="Application.ParkingSystem">
     <configuration name="ParkingSystem" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="edu.du.ict4305.parkingsystem.ParkingSystem" />
+      <option name="MAIN_CLASS_NAME" value="edu.du.ict4305.parkingsytem.ParkingSystem" />
       <module name="ParkingSystem" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="edu.du.ict4305.parkingsystem.*" />
+          <option name="PATTERN" value="edu.du.ict4305.parkingsytem.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -99,7 +113,7 @@
       <module name="ParkingSystem" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="edu.du.ict4305.parkingsystem.*" />
+          <option name="PATTERN" value="edu.du.ict4305.parkingsytem.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -114,7 +128,7 @@
       <module name="ParkingSystem" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="edu.du.ict4305.parkingsystem.*" />
+          <option name="PATTERN" value="edu.du.ict4305.parkingsytem.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -130,7 +144,7 @@
       <module name="ParkingSystem" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="edu.du.ict4305.parkingsystem.*" />
+          <option name="PATTERN" value="edu.du.ict4305.parkingsytem.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -146,7 +160,7 @@
       <module name="ParkingSystem" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="edu.du.ict4305.parkingsystem.*" />
+          <option name="PATTERN" value="edu.du.ict4305.parkingsytem.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -183,7 +197,9 @@
       <workItem from="1665533871147" duration="30123000" />
       <workItem from="1666185512585" duration="392000" />
       <workItem from="1666269548106" duration="32863000" />
-      <workItem from="1667754671541" duration="9204000" />
+      <workItem from="1667754671541" duration="9614000" />
+      <workItem from="1668106355808" duration="201000" />
+      <workItem from="1668106591327" duration="1580000" />
     </task>
     <task id="LOCAL-00001" summary="Test the Car class getter methods">
       <created>1665086935477</created>

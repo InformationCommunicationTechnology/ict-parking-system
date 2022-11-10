@@ -3,7 +3,7 @@
  * @File: Car.java
  * @Instructor: Dr. Sherri Maciosek
  */
-package edu.du.ict4305.parkingsystem;
+package edu.du.ict4305.parkingsytem;
 
 import java.time.LocalDate;
 import java.util.Objects;
@@ -129,11 +129,10 @@ public class Car {
 
       @Override
       public String toString() {
-            return "Car{" +
+            return "Car:\n" +
                     "permit='" + permit + '\'' +
-                    ", permitExpiration=" + permitExpiration +
-                    ", license='" + license + '\'' +
-                    ", type=" + type +
-                    '}';
+                    ",\npermitExpiration=" + permitExpiration +
+                    ",\nlicense='" + license + '\'' +
+                    ",\ntype=" + type;
       }
 }

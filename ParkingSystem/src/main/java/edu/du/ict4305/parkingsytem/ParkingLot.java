@@ -3,7 +3,7 @@
  * @File: ParkingLot.java
  * @Instructor: Dr. Sherri Maciosek
  */
-package edu.du.ict4305.parkingsystem;
+package edu.du.ict4305.parkingsytem;
 
 import java.time.Instant;
 import java.time.LocalDate;
@@ -150,10 +150,9 @@ public class ParkingLot {
 
       @Override
       public String toString() {
-            return "ParkingLot{" +
+            return "ParkingLot:\n" +
                     "lotId='" + lotId + '\'' +
-                    ", address='" + address + '\'' +
-                    ", capacity=" + capacity +
-                    '}';
+                    ",\naddress='" + address + '\'' +
+                    ",\ncapacity=" + capacity;
       }
 }

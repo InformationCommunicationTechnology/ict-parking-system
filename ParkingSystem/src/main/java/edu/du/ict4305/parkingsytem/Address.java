@@ -3,7 +3,7 @@
  * @File: Address.java
  * @Instructor: Dr. Sherri Maciosek
  */
-package edu.du.ict4305.parkingsystem;
+package edu.du.ict4305.parkingsytem;
 
 /**
  * The type Address.
@@ -130,12 +130,11 @@ public class Address {
 
       @Override
       public String toString() {
-            return "Address{" +
+            return "Address:\n" +
                     "streetAddress1='" + streetAddress1 + '\'' +
-                    ", getStreetAddress2='" + getStreetAddress2 + '\'' +
-                    ", city='" + city + '\'' +
-                    ", state='" + state + '\'' +
-                    ", zipCode='" + zipCode + '\'' +
-                    '}';
+                    ",\ngetStreetAddress2='" + getStreetAddress2 + '\'' +
+                    ",\ncity='" + city + '\'' +
+                    ",\nstate='" + state + '\'' +
+                    ",\nzipCode='" + zipCode + '\'';
       }
 }

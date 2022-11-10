@@ -3,9 +3,7 @@
  * @Project: ParkingSystem
  * @Instructor: Dr. Sherri Maciosek
  */
-package edu.du.ict4305.parkingsystem;
-
-import java.time.Instant;
+package edu.du.ict4305.parkingsytem;
 
 /**
  * The type Money.
@@ -42,8 +40,7 @@ public class Money {
        */
       @Override
       public String toString() {
-            return "Money{" +
-                    "cents=" + cents +
-                    '}';
+            return "Money:\n" +
+                    "cents=" + cents;
       }
 }

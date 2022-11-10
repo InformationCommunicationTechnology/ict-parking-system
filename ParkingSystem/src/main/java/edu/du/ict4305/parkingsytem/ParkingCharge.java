@@ -3,7 +3,7 @@
  * @Project: ParkingSystem
  * @Instructor: Dr. Sherri Maciosek
  */
-package edu.du.ict4305.parkingsystem;
+package edu.du.ict4305.parkingsytem;
 
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
@@ -189,13 +189,12 @@ public class ParkingCharge {
        */
       @Override
       public String toString() {
-            return "ParkingCharge{" +
+            return "ParkingCharge:\n" +
                     "lotId='" + lotId + '\'' +
-                    ", incurred=" + incurred +
-                    ", amount=" + amount +
-                    ", permitId='" + permitId + '\'' +
-                    ", incurredAmount=" + incurredAmount +
-                    ", numberOfDaysIncurred=" + numberOfDaysIncurred +
-                    '}';
+                    ",\nincurred=" + incurred +
+                    ",\namount=" + amount +
+                    ",\npermitId='" + permitId + '\'' +
+                    ",\nincurredAmount=" + incurredAmount +
+                    ",\nnumberOfDaysIncurred=" + numberOfDaysIncurred;
       }
 }

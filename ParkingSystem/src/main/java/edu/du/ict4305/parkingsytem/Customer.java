@@ -3,7 +3,7 @@
  * @File: Customer.java
  * @Instructor: Dr. Sherri Maciosek
  */
-package edu.du.ict4305.parkingsystem;
+package edu.du.ict4305.parkingsytem;
 
 import java.time.LocalDate;
 import java.util.Objects;
@@ -129,11 +129,10 @@ public class Customer {
 
       @Override
       public String toString() {
-            return "Customer{" +
+            return "Customer:" +
                     "customerId='" + customerId + '\'' +
-                    ", name='" + name + '\'' +
-                    ", address=" + address +
-                    ", phoneNumber='" + phoneNumber + '\'' +
-                    '}';
+                    ",\nname='" + name + '\'' +
+                    ",\naddress=" + address +
+                    ",\nphoneNumber='" + phoneNumber + '\'';
       }
 }

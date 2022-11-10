@@ -3,7 +3,7 @@
  * @Project: ParkingSystem
  * @Instructor: Dr. Sherri Maciosek
  */
-package edu.du.ict4305.parkingsystem;
+package edu.du.ict4305.parkingsytem;
 
 import java.time.LocalDate;
 import java.util.*;
@@ -206,15 +206,14 @@ public class ParkingOffice {
 
       @Override
       public String toString() {
-            return "ParkingOffice{" +
+            return "ParkingOffice:" +
                     "name='" + name + '\'' +
-                    ", address='" + address + '\'' +
-                    ", customers=" + customers +
-                    ", cars=" + cars +
-                    ", lots=" + lots +
-                    ", charges=" + charges +
-                    ", car=" + car +
-                    ", parkingLot=" + parkingLot +
-                    '}';
+                    ",\naddress='" + address + '\'' +
+                    ",\ncustomers=" + customers +
+                    ",\ncars=" + cars +
+                    ",\nlots=" + lots +
+                    ",\ncharges=" + charges +
+                    ",\ncar=" + car +
+                    ",\nparkingLot=" + parkingLot;
       }
 }
