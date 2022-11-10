@@ -3,7 +3,7 @@
  * @Project: ParkingSystem
  * @Instructor: Dr. Sherri Maciosek
  */
-package edu.du.ict4305.parkingsytem;
+package edu.du.ict4305.parkingsystem;
 
 import java.time.LocalDate;
 import java.util.*;

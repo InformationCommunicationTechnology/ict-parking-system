@@ -3,7 +3,7 @@
  * @File: ParkingLot.java
  * @Instructor: Dr. Sherri Maciosek
  */
-package edu.du.ict4305.parkingsytem;
+package edu.du.ict4305.parkingsystem;
 
 import java.time.Instant;
 import java.time.LocalDate;

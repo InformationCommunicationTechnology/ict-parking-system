@@ -3,7 +3,7 @@
  * @File: CarType.java
  * @Instructor: Dr. Sherri Maciosek
  */
-package edu.du.ict4305.parkingsytem;
+package edu.du.ict4305.parkingsystem;
 
 /**
  * The enum Car type.
