@@ -175,33 +175,31 @@ public class ParkingOfficeTest {
             for(Customer customer: customers){
                   permitIds.add(customer.getCustomerId());
             }
-            assertEquals(permitIds.size(),parkingOffice.getCustomerPermitIds(new Customer("luther", "303422428",  new Address("4581 S Valdai Way.", "Aurora", "CO", "80015"), "### ### ####")).size());
+            assertEquals(permitIds.size(), parkingOffice.getCustomerIds().size());
       }
 
       @Test
-      public void getPermitAllIds() {
+      public void getPermitIds() {
             Collection<String> permitIds = new ArrayList<>();
             List<ParkingCharge> charges = new ArrayList<>();
             charges.add(new ParkingCharge("4728", Instant.now(), new Money(200), "valid", 17));
             charges.add(new ParkingCharge("2847", Instant.now(), new Money(78), "invalid", 17));
-            parkingOffice = new ParkingOffice("luther", "4581 S Valdai Way. Aurora CO 80015", customers, cars, lots, charges, new Car("valid", LocalDate.now(), "OOY350", CarType.COMPACT),new ParkingLot("lotId", "My Address", 90));
+            parkingOffice = new ParkingOffice("luther", "4581 S Valdai Way. Aurora CO 80015", customers, cars, lots, charges, new Car("valid", LocalDate.now(), "OOY350", CarType.COMPACT), new ParkingLot("lotId", "My Address", 90));
             for (ParkingCharge parkingCharge : charges) {
                   permitIds.add(parkingCharge.getPermitId());
             }
-            assertEquals(permitIds.size(),parkingOffice.getPermitAllIds().size());
+            assertEquals(permitIds.size(), parkingOffice.getPermitIds().size());
       }
 
       @Test
       public void getCustomerPermitIds() {
             Collection<String> customerPermitIds = new ArrayList<>();
             List<Customer> customers = new ArrayList<>();
-            List<ParkingCharge> charges = new ArrayList<>();
-            charges.add(new ParkingCharge("4728", Instant.now(), new Money(200), "valid", 17));
             customers.add(new Customer("luther", "303422428",  new Address("4581 S Valdai Way.", "Aurora", "CO", "80015"), "### ### ####"));
             parkingOffice = new ParkingOffice("luther", "4581 S Valdai Way. Aurora CO 80015", customers, cars, lots, charges, new Car("valid", LocalDate.now(), "OOY350", CarType.COMPACT),new ParkingLot("lotId", "My Address", 90));
             for (Customer customer : customers) {
                   customerPermitIds.add(customer.getCustomerId());
             }
-            assertEquals(1,parkingOffice.getCustomerPermitIds(new Customer("luther", "303422428",  new Address("4581 S Valdai Way.", "Aurora", "CO", "80015"), "### ### ####")).size());
+            assertEquals(customerPermitIds.size(), parkingOffice.getPermitIds(new Customer("luther", "303422428", new Address("4581 S Valdai Way.", "Aurora", "CO", "80015"), "### ### ####")).size());
       }
 }

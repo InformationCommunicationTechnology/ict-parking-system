@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4cb78f78-9c8b-44e9-9843-61206fcfa855" name="Changes" comment="Update the print statements to start printing the toString" />
+    <list default="true" id="4cb78f78-9c8b-44e9-9843-61206fcfa855" name="Changes" comment="Refactor to use parkingsystem">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/du/ict4305/parkingsystem/ParkingOffice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/du/ict4305/parkingsystem/ParkingOffice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/edu/du/ict4305/parkingsystem/ParkingOfficeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/edu/du/ict4305/parkingsystem/ParkingOfficeTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -70,13 +74,13 @@
       <recent name="edu.du.ict4305.parkingsystem" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ParkingSystem">
+  <component name="RunManager" selected="JUnit.ParkingOfficeTest.getCustomerPermitIds">
     <configuration name="ParkingSystem" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="edu.du.ict4305.parkingsytem.ParkingSystem" />
+      <option name="MAIN_CLASS_NAME" value="edu.du.ict4305.parkingsystem.ParkingSystem" />
       <module name="ParkingSystem" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="edu.du.ict4305.parkingsytem.*" />
+          <option name="PATTERN" value="edu.du.ict4305.parkingsystem.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -88,7 +92,7 @@
       <module name="ParkingSystem" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="edu.du.ict4305.parkingsytem.*" />
+          <option name="PATTERN" value="edu.du.ict4305.parkingsystem.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -103,7 +107,7 @@
       <module name="ParkingSystem" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="edu.du.ict4305.parkingsytem.*" />
+          <option name="PATTERN" value="edu.du.ict4305.parkingsystem.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -119,7 +123,7 @@
       <module name="ParkingSystem" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="edu.du.ict4305.parkingsytem.*" />
+          <option name="PATTERN" value="edu.du.ict4305.parkingsystem.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -135,7 +139,7 @@
       <module name="ParkingSystem" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="edu.du.ict4305.parkingsytem.*" />
+          <option name="PATTERN" value="edu.du.ict4305.parkingsystem.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -149,11 +153,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ParkingOfficeTest.getCustomerPermitIds" />
+        <item itemvalue="JUnit.ParkingOfficeTest.getPermitAllIds" />
+        <item itemvalue="JUnit.ParkingOfficeTest.getCustomerIds" />
         <item itemvalue="Application.ParkingSystem" />
         <item itemvalue="JUnit.ParkingOfficeTest" />
-        <item itemvalue="JUnit.ParkingOfficeTest.getCustomerIds" />
-        <item itemvalue="JUnit.ParkingOfficeTest.getPermitAllIds" />
-        <item itemvalue="JUnit.ParkingOfficeTest.getCustomerPermitIds" />
       </list>
     </recent_temporary>
   </component>
@@ -174,7 +178,7 @@
       <workItem from="1666269548106" duration="32863000" />
       <workItem from="1667754671541" duration="9614000" />
       <workItem from="1668106355808" duration="201000" />
-      <workItem from="1668106591327" duration="2067000" />
+      <workItem from="1668106591327" duration="3751000" />
     </task>
     <task id="LOCAL-00001" summary="Test the Car class getter methods">
       <created>1665086935477</created>
@@ -281,7 +285,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668108752572</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Refactor to use parkingsystem">
+      <created>1668108832284</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1668108832284</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -313,7 +324,8 @@
     <MESSAGE value="Use this one instead" />
     <MESSAGE value="Push the pom.xml" />
     <MESSAGE value="Update the print statements to start printing the toString" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update the print statements to start printing the toString" />
+    <MESSAGE value="Refactor to use parkingsystem" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor to use parkingsystem" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">

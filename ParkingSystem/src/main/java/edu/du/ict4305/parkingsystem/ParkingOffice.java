@@ -184,7 +184,7 @@ public class ParkingOffice {
       /**
        * @return permitIds
        */
-      public Collection<String> getPermitAllIds() {
+      public Collection<String> getPermitIds() {
             Collection<String> permitIds = new ArrayList<>();
             for (ParkingCharge parkingCharge : charges) {
                   permitIds.add(parkingCharge.getPermitId());
@@ -196,12 +196,12 @@ public class ParkingOffice {
        * @param customer
        * @return permitIds
        */
-      public  Collection<String> getCustomerPermitIds(Customer customer){
-            Collection <String>permitIds = new ArrayList<>();
-            if(customers.contains(customer)){
+      public Collection<String> getPermitIds(Customer customer) {
+            Collection<String> permitIds = new ArrayList<>();
+            if (customers.contains(customer)) {
                   permitIds.add(customer.getCustomerId());
             }
-            return  permitIds;
+            return permitIds;
       }
 
       @Override
@@ -216,4 +216,5 @@ public class ParkingOffice {
                     ",\ncar=" + car +
                     ",\nparkingLot=" + parkingLot;
       }
+
 }
