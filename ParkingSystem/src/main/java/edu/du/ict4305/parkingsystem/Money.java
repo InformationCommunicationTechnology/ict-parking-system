@@ -5,8 +5,6 @@
  */
 package edu.du.ict4305.parkingsystem;
 
-import java.time.Instant;
-
 /**
  * The type Money.
  *
@@ -40,7 +38,9 @@ public class Money {
       /**
        * @return
        */
+      @Override
       public String toString() {
-            return "$" + getDollars();
+            return "Money:\n" +
+                    "cents=" + cents;
       }
 }

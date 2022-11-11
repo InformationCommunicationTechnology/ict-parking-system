@@ -6,6 +6,7 @@
 package edu.du.ict4305.parkingsystem;
 
 import java.time.LocalDate;
+import java.util.Objects;
 
 /**
  * The type Customer.
@@ -113,4 +114,25 @@ public class Customer {
             return car;
       }
 
+      @Override
+      public boolean equals(Object o) {
+            if (this == o) return true;
+            if (o == null || getClass() != o.getClass()) return false;
+            Customer customer = (Customer) o;
+            return Objects.equals(customerId, customer.customerId) && Objects.equals(name, customer.name) && Objects.equals(address, customer.address) && Objects.equals(phoneNumber, customer.phoneNumber);
+      }
+
+      @Override
+      public int hashCode() {
+            return Objects.hash(customerId, name, address, phoneNumber);
+      }
+
+      @Override
+      public String toString() {
+            return "Customer:" +
+                    "customerId='" + customerId + '\'' +
+                    ",\nname='" + name + '\'' +
+                    ",\naddress=" + address +
+                    ",\nphoneNumber='" + phoneNumber + '\'';
+      }
 }

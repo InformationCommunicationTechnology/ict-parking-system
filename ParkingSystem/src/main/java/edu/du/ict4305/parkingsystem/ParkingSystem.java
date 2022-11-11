@@ -23,32 +23,44 @@ public class ParkingSystem {
        * @param args the input arguments
        */
       public static void main(String[] args) {
-            Address address = new Address("4581 S Valdai Way.", "Aurora", "CO", "80015");
-            System.out.println("My address is\n" + address.getAddressInfo());
-            Customer customer = new Customer("luther", "303422428", address, "### ### ####");
-            ParkingLot parkingLot = new ParkingLot("4", "4581 S Valdai Way. Aurora CO 80015", 76);
-
-            // ##############################################################################################
-            //                                                                                              #
-            //            ASSIGNMENT: ADD MONEY, PARKING CHARGE, AND PARKING OFFICE CLASSES                 #
-            //                                                                                              #
-            // ##############################################################################################
             List<Customer> customers = new ArrayList<>();
             List<Car> cars = new ArrayList<>();
             List<ParkingLot> lots = new ArrayList<>();
             List<ParkingCharge> charges = new ArrayList<>();
-
+            Address address = new Address("4581 S Valdai Way.", "Aurora", "CO", "80015");
+            Customer customer = new Customer("luther", "303422428", address, "### ### ####");
+            ParkingLot parkingLot = new ParkingLot("4", "4581 S Valdai Way. Aurora CO 80015", 76);
+            Car car = new Car("valid", LocalDate.now(), "OOY350", CarType.COMPACT);
+            Money money = new Money(67);
             ParkingCharge parkingCharge = new ParkingCharge("4728", Instant.now(), new Money(200), "valid", 17);
-            ParkingOffice parkingOffice = new ParkingOffice("luther", "4581 S Valdai Way. Aurora CO 80015", customers, cars, lots, charges, new Car("valid", LocalDate.now(), "OOY350", CarType.COMPACT),new ParkingLot("lotId", "My Address", 90));
+            ParkingOffice parkingOffice = new ParkingOffice("luther", "4581 S Valdai Way. Aurora CO 80015", customers, cars, lots, charges, new Car("valid", LocalDate.now(), "OOY350", CarType.COMPACT), new ParkingLot("lotId", "My Address", 90));
 
+            charges.add(parkingCharge);
             parkingOffice.register("customer", new Address("4581 S Valdai Way.", "Aurora", "CO", "80015"), "##########");
-            System.out.println("The size of the customers is " + customers.size());
             parkingOffice.register(new Customer("luther", "303422428", address, "### ### ####"), "OOY350", CarType.COMPACT);
-            System.out.println("The size of the cars is " + cars.size());
-
-            System.out.println("The parking charge is " + parkingOffice.addCharge(new ParkingCharge("4728", Instant.now(), new Money(200), "valid", 17)));
-
             parkingOffice.addCarToParkingLot();
+
+            System.out.println("######## Address ###########\n"
+                    + address.toString()
+                    + "\n###################");
+            System.out.println("######## Car ###########\n"
+                    + car.toString()
+                    + "\n###################");
+            System.out.println("######## Customer ###########\n"
+                    + customer.toString()
+                    + "\n###################");
+            System.out.println("######## Money ###########\n"
+                    + money.toString()
+                    + "\n###################");
+            System.out.println("######## Parking Charge ###########\n"
+                    + parkingCharge.toString()
+                    + "\n###################");
+            System.out.println("######## Parking Lot ###########\n"
+                    + parkingLot.toString()
+                    + "\n###################");
+            System.out.println("######## Parking Office ###########\n"
+                    + parkingOffice.toString()
+                    + "\n###################");
 
       }
 

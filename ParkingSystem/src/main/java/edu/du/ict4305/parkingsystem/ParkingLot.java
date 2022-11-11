@@ -22,6 +22,19 @@ public class ParkingLot {
       private String address;
       private int capacity;
 
+      @Override
+      public boolean equals(Object o) {
+            if (this == o) return true;
+            if (o == null || getClass() != o.getClass()) return false;
+            ParkingLot that = (ParkingLot) o;
+            return capacity == that.capacity && Objects.equals(lotId, that.lotId) && Objects.equals(address, that.address);
+      }
+
+      @Override
+      public int hashCode() {
+            return Objects.hash(lotId, address, capacity);
+      }
+
       /**
        * Instantiates a new Parking lot.
        */
@@ -85,10 +98,10 @@ public class ParkingLot {
             this.capacity = capacity;
       }
 
-      public  boolean isCapacityFull(){
+      public boolean isCapacityFull() {
             if (getCapacity() <= 0) {
                   throw new IllegalArgumentException("Parking Lot is full");
-            }else{
+            } else {
                   return false;
             }
       }
@@ -117,16 +130,16 @@ public class ParkingLot {
             List<Car> cars = new ArrayList<>();
             List<ParkingLot> lots = new ArrayList<>();
             List<ParkingCharge> charges = new ArrayList<>();
-            ParkingOffice parkingOffice = new ParkingOffice("luther","4581 S Valdai Way. Aurora CO 80015",customers,cars,lots,charges,new Car("valid",LocalDate.now(),"OOY350",CarType.COMPACT),new ParkingLot("lotId", "My Address", 90));
+            ParkingOffice parkingOffice = new ParkingOffice("luther", "4581 S Valdai Way. Aurora CO 80015", customers, cars, lots, charges, new Car("valid", LocalDate.now(), "OOY350", CarType.COMPACT), new ParkingLot("lotId", "My Address", 90));
             long cents = 100;
             int numberOfDaysIncurred = 17;
-            if ( Objects.equals(car.getPermit(), "valid") && !isCapacityFull()) {
+            if (Objects.equals(car.getPermit(), "valid") && !isCapacityFull()) {
                   System.out.println("Enter the parking lot");
-                  if(car.getType() == CarType.COMPACT){
-                        ParkingCharge parkingCharge = new ParkingCharge("4728", Instant.now(), new Money(cents), "valid",numberOfDaysIncurred);
-                        double regularChargeWithDiscount = parkingCharge.getIncurredAmount() - ((cents/100.0) * .2);
+                  if (car.getType() == CarType.COMPACT) {
+                        ParkingCharge parkingCharge = new ParkingCharge("4728", Instant.now(), new Money(cents), "valid", numberOfDaysIncurred);
+                        double regularChargeWithDiscount = parkingCharge.getIncurredAmount() - ((cents / 100.0) * .2);
                         System.out.println("Your total amount is " + regularChargeWithDiscount);
-                  }else {
+                  } else {
                         ParkingCharge parkingCharge = new ParkingCharge("4728", Instant.now(), new Money(cents), "valid", numberOfDaysIncurred);
                         double regularCharge = parkingCharge.getIncurredAmount();
                         System.out.println("Your total amount is " + regularCharge);
@@ -135,4 +148,11 @@ public class ParkingLot {
             }
       }
 
+      @Override
+      public String toString() {
+            return "ParkingLot:\n" +
+                    "lotId='" + lotId + '\'' +
+                    ",\naddress='" + address + '\'' +
+                    ",\ncapacity=" + capacity;
+      }
 }
