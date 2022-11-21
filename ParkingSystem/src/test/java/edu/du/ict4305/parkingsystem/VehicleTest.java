@@ -16,14 +16,14 @@ import static org.junit.jupiter.api.Assertions.*;
  * @author lutherchikumba
  *
  */
-public class CarTest {
-      Car car;
+public class VehicleTest {
+      Vehicle car;
       LocalDate date;
       CarType type;
-      public CarTest() {
+      public VehicleTest() {
             date = LocalDate.now();
             type = CarType.COMPACT;
-            car = new Car("valid", date, "YYY:350", type);
+            car = new Vehicle("valid", date, "YYY:350", type);
       }
 
       @Test

@@ -4,10 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4cb78f78-9c8b-44e9-9843-61206fcfa855" name="Changes" comment="Refactor to use parkingsystem">
+    <list default="true" id="4cb78f78-9c8b-44e9-9843-61206fcfa855" name="Changes" comment="Update the tests">
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/du/ict4305/parkingsystem/ParkingPermit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/du/ict4305/parkingsystem/ParkingTransaction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/du/ict4305/parkingsystem/PermitManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/du/ict4305/parkingsystem/TransactionManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/edu/du/ict4305/parkingsystem/ParkingPermitTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/edu/du/ict4305/parkingsystem/ParkingTransactionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/edu/du/ict4305/parkingsystem/PermitManagerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/edu/du/ict4305/parkingsystem/TransactionManagerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/du/ict4305/parkingsystem/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/du/ict4305/parkingsystem/Vehicle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/du/ict4305/parkingsystem/CarType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/du/ict4305/parkingsystem/CarType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/du/ict4305/parkingsystem/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/du/ict4305/parkingsystem/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/du/ict4305/parkingsystem/ParkingCharge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/du/ict4305/parkingsystem/ParkingCharge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/du/ict4305/parkingsystem/ParkingLot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/du/ict4305/parkingsystem/ParkingLot.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/du/ict4305/parkingsystem/ParkingOffice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/du/ict4305/parkingsystem/ParkingOffice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/du/ict4305/parkingsystem/ParkingSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/du/ict4305/parkingsystem/ParkingSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/edu/du/ict4305/parkingsystem/CarTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/edu/du/ict4305/parkingsystem/VehicleTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/edu/du/ict4305/parkingsystem/ParkingOfficeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/edu/du/ict4305/parkingsystem/ParkingOfficeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/edu/du/ict4305/parkingsystem/CarTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/edu/du/ict4305/parkingsystem/CustomerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/edu/du/ict4305/parkingsystem/CustomerTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +80,9 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="edu.du.ict4305.parkingsystem" />
+    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
@@ -74,20 +94,7 @@
       <recent name="edu.du.ict4305.parkingsystem" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ParkingOfficeTest.getCustomerPermitIds">
-    <configuration name="ParkingSystem" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="edu.du.ict4305.parkingsystem.ParkingSystem" />
-      <module name="ParkingSystem" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="edu.du.ict4305.parkingsystem.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.ParkingOfficeTest">
     <configuration name="ParkingOfficeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ParkingSystem" />
       <extension name="coverage">
@@ -103,7 +110,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ParkingOfficeTest.getCustomerIds" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ParkingTransactionTest.setFeeCharged" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ParkingSystem" />
       <extension name="coverage">
         <pattern>
@@ -112,14 +119,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="edu.du.ict4305.parkingsystem" />
-      <option name="MAIN_CLASS_NAME" value="edu.du.ict4305.parkingsystem.ParkingOfficeTest" />
-      <option name="METHOD_NAME" value="getCustomerIds" />
+      <option name="MAIN_CLASS_NAME" value="edu.du.ict4305.parkingsystem.ParkingTransactionTest" />
+      <option name="METHOD_NAME" value="setFeeCharged" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ParkingOfficeTest.getCustomerPermitIds" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PermitManagerTest.register" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ParkingSystem" />
       <extension name="coverage">
         <pattern>
@@ -128,14 +135,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="edu.du.ict4305.parkingsystem" />
-      <option name="MAIN_CLASS_NAME" value="edu.du.ict4305.parkingsystem.ParkingOfficeTest" />
-      <option name="METHOD_NAME" value="getCustomerPermitIds" />
+      <option name="MAIN_CLASS_NAME" value="edu.du.ict4305.parkingsystem.PermitManagerTest" />
+      <option name="METHOD_NAME" value="register" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ParkingOfficeTest.getPermitAllIds" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TransactionManagerTest.getParkingCharges" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ParkingSystem" />
       <extension name="coverage">
         <pattern>
@@ -144,8 +151,24 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="edu.du.ict4305.parkingsystem" />
-      <option name="MAIN_CLASS_NAME" value="edu.du.ict4305.parkingsystem.ParkingOfficeTest" />
-      <option name="METHOD_NAME" value="getPermitAllIds" />
+      <option name="MAIN_CLASS_NAME" value="edu.du.ict4305.parkingsystem.TransactionManagerTest" />
+      <option name="METHOD_NAME" value="getParkingCharges" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TransactionManagerTest.park" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ParkingSystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.du.ict4305.parkingsystem.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="edu.du.ict4305.parkingsystem" />
+      <option name="MAIN_CLASS_NAME" value="edu.du.ict4305.parkingsystem.TransactionManagerTest" />
+      <option name="METHOD_NAME" value="park" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -153,11 +176,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ParkingOfficeTest.getCustomerPermitIds" />
-        <item itemvalue="JUnit.ParkingOfficeTest.getPermitAllIds" />
-        <item itemvalue="JUnit.ParkingOfficeTest.getCustomerIds" />
-        <item itemvalue="Application.ParkingSystem" />
         <item itemvalue="JUnit.ParkingOfficeTest" />
+        <item itemvalue="JUnit.TransactionManagerTest.getParkingCharges" />
+        <item itemvalue="JUnit.PermitManagerTest.register" />
+        <item itemvalue="JUnit.TransactionManagerTest.park" />
+        <item itemvalue="JUnit.ParkingTransactionTest.setFeeCharged" />
       </list>
     </recent_temporary>
   </component>
@@ -179,6 +202,10 @@
       <workItem from="1667754671541" duration="9614000" />
       <workItem from="1668106355808" duration="201000" />
       <workItem from="1668106591327" duration="3751000" />
+      <workItem from="1668611990016" duration="8181000" />
+      <workItem from="1668788614437" duration="1647000" />
+      <workItem from="1668898296344" duration="10832000" />
+      <workItem from="1669001033420" duration="903000" />
     </task>
     <task id="LOCAL-00001" summary="Test the Car class getter methods">
       <created>1665086935477</created>

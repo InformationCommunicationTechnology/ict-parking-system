@@ -111,7 +111,7 @@ public class ParkingLot {
        *
        * @param car the car
        */
-      public void entry(Car car) {
+      public void entry(Vehicle car) {
 //            car.setLicense("YYY:350");
 //            car.setPermit("Invalid");
 //            car.setType(CarType.COMPACT);
@@ -127,10 +127,10 @@ public class ParkingLot {
             // ##############################################################################################
 
             List<Customer> customers = new ArrayList<>();
-            List<Car> cars = new ArrayList<>();
+            List<Vehicle> cars = new ArrayList<>();
             List<ParkingLot> lots = new ArrayList<>();
             List<ParkingCharge> charges = new ArrayList<>();
-            ParkingOffice parkingOffice = new ParkingOffice("luther", "4581 S Valdai Way. Aurora CO 80015", customers, cars, lots, charges, new Car("valid", LocalDate.now(), "OOY350", CarType.COMPACT), new ParkingLot("lotId", "My Address", 90));
+            ParkingOffice parkingOffice = new ParkingOffice("DU",new Address("4581 S Valdai Way.", "Aurora", "CO", "80015"),customers,lots);
             long cents = 100;
             int numberOfDaysIncurred = 17;
             if (Objects.equals(car.getPermit(), "valid") && !isCapacityFull()) {
