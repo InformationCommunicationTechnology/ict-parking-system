@@ -1,6 +1,6 @@
 /**
  * @Course: ICT 4305
- * @File: Car.java
+ * @File: Vehicle.java
  * @Instructor: Dr. Sherri Maciosek
  */
 package edu.du.ict4305.parkingsystem;
@@ -9,21 +9,21 @@ import java.time.LocalDate;
 import java.util.Objects;
 
 /**
- * The type Car.
+ * The type Vehicle.
  *
  * @author lutherchikumba
  * @Date: 9 /29/2022
  */
-public class Car {
+public class Vehicle {
       private String permit;
       private LocalDate permitExpiration;
       private String license;
       private CarType type;
 
       /**
-       * Instantiates a new Car.
+       * Instantiates a new Vehicle.
        */
-      public Car(String permit, LocalDate permitExpiration, String license, CarType type) {
+      public Vehicle(String permit, LocalDate permitExpiration, String license, CarType type) {
             this.permit = permit;
             this.permitExpiration = permitExpiration;
             this.license = license;
@@ -117,7 +117,7 @@ public class Car {
             System.out.println("I'm here");
             if (this == o) return true;
             if (o == null || getClass() != o.getClass()) return false;
-            Car car = (Car) o;
+            Vehicle car = (Vehicle) o;
             return Objects.equals(permit, car.permit) && Objects.equals(permitExpiration, car.permitExpiration) && Objects.equals(license, car.license) && type == car.type;
       }
 
@@ -129,7 +129,7 @@ public class Car {
 
       @Override
       public String toString() {
-            return "Car:\n" +
+            return "Vehicle:\n" +
                     "permit='" + permit + '\'' +
                     ",\npermitExpiration=" + permitExpiration +
                     ",\nlicense='" + license + '\'' +

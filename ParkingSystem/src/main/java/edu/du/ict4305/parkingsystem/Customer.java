@@ -109,8 +109,8 @@ public class Customer {
        * @param Car     the car
        * @return car
        */
-      public Car register(String license, CarType type) {
-            Car car = new Car("invalid", LocalDate.now(), license, type);
+      public Vehicle register(String license, CarType type) {
+            Vehicle car = new Vehicle("invalid", LocalDate.now(), license, type);
             return car;
       }
 

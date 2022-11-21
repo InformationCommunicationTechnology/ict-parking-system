@@ -167,7 +167,7 @@ public class ParkingCharge {
        */
       public double getIncurredAmount() {
             incurredAmount = getAmount().getDollars() * numberOfDaysIncurred;
-            System.out.println("Number of days incuured is " + numberOfDaysIncurred);
+            System.out.println("Number of days incurred is " + numberOfDaysIncurred);
             return incurredAmount;
       }
 

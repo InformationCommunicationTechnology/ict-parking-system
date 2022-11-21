@@ -6,7 +6,7 @@
 package edu.du.ict4305.parkingsystem;
 
 /**
- * The enum Car type.
+ * The enum Vehicle type.
  *
  * @author lutherchikumba
  * @Date: 9 /29/2022
